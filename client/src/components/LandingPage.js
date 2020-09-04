@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 class LandingPage extends React.Component {
   state = {
-    email: null,
+    username: null,
     password: null,
   };
 
@@ -15,7 +15,7 @@ class LandingPage extends React.Component {
 
   handleEmail = (e) => {
     this.setState({
-      email: e.target.value,
+      username: e.target.value,
     });
   };
 
@@ -32,7 +32,7 @@ class LandingPage extends React.Component {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          email: this.state.email,
+          username: this.state.username,
           password: this.state.password,
         }),
       }
@@ -49,7 +49,7 @@ class LandingPage extends React.Component {
       <div className="signin-content-box">
         <h1>Welcome to Vacation Detective</h1>
         <form>
-          <h3>Email:</h3>
+          <h3>Username/Email:</h3>
           <input type="text" name="email" onChange={this.handleEmail} />
           <h3>Password:</h3>
           <input

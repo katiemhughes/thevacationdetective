@@ -3,19 +3,19 @@ import { Link } from "react-router-dom";
 
 class LandingPage extends React.Component {
   state = {
-    email: null,
-    password: null
+    username: null,
+    password: null,
   };
 
-//   handleChange = (e) => {
-//     this.setState({
-//       [e.target.name]: e.target.value,
-//     });
-//   };
+  //   handleChange = (e) => {
+  //     this.setState({
+  //       [e.target.name]: e.target.value,
+  //     });
+  //   };
 
-handleEmail = (e) => {
+  handleEmail = (e) => {
     this.setState({
-      email: e.target.value,
+      username: e.target.value,
     });
   };
 
@@ -27,12 +27,12 @@ handleEmail = (e) => {
 
   handleSubmit = async (e) => {
     const response = await fetch(
-      "http://localhost:4500/vacationdetective/v1/signin",
+      "http://localhost:4500/vacationdetective/v1/signInAuthentication",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          email: this.state.email,
+          username: this.state.username,
           password: this.state.password,
         }),
       }
@@ -49,10 +49,14 @@ handleEmail = (e) => {
       <div className="signin-content-box">
         <h1>Welcome to Vacation Detective</h1>
         <form>
-          <h3>Email:</h3>
+          <h3>Username/Email:</h3>
           <input type="text" name="email" onChange={this.handleEmail} />
           <h3>Password:</h3>
-          <input type="password" name="password" onChange={this.handlePassword} />
+          <input
+            type="password"
+            name="password"
+            onChange={this.handlePassword}
+          />
           <br />
           <button className="submit-btn" type="submit">
             Submit

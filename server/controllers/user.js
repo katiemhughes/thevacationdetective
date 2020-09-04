@@ -3,17 +3,13 @@ const bcrypt = require("bcrypt");
 
 exports.addUser = async function (req, res, next) {
   let { firstName, lastName, userName, email, password } = req.body;
-
-  const hash = await bcrypt.hashSync(password, 10);
-
   const newUser = new User({
     firstName,
     lastName,
     userName,
     email,
-    password: hash,
+    password,
   });
-
   newUser.save((err) => {
     if (err) return next(err);
     else
@@ -35,58 +31,34 @@ exports.returnAllUsers = function (req, res, next) {
   });
 };
 
-// exports.signInAuthentication = function (req, res, next) {
-//   let username = req.body.username;
-//   let password = req.body.password;
-//   User.findOne({ $or: [{ email: username }, { userName: username }] }).then(
-//     (user) => {
-//       console.log(user);
-//       if (user) {
-//         let result = bcrypt.compareSync(password, user.password);
-//         console.log(result);
-//         if (result) {
-//           res.json({
-//             message: "Log in successful",
-//           });
-//         } else {
-//           res.json({
-//             error: err.message,
-//           });
-//           console.log(user);
-//         }
-//       } else {
-//         res.json({
-//           message: "No user found",
-//         });
-//       }
-//     }
-//   );
-// };
-
-exports.signInAuthentication = function (req, res, next) {
+exports.signInAuthentication = async function (req, res, next) {
   let username = req.body.username;
   let password = req.body.password;
-  User.findOne({ $or: [{ email: username }, { userName: username }] }).then(
-    async (user) => {
-      if (user) {
-        await bcrypt.compare(password, user.password, function (err, result) {
-          if (err) {
-            res.json({
-              error: err.message,
-            });
-            console.log(user.password);
-          }
-          if (result) {
-            res.json({
-              message: "Log in successful",
-            });
-          }
-        });
-      } else {
-        res.json({
-          message: "No user found",
-        });
-      }
+  await User.findOne({
+    $or: [{ email: username }, { userName: username }],
+  }).then((user) => {
+    if (user) {
+      bcrypt.compare(password, user.password, function (err, result) {
+        if (err) {
+          res.json({
+            error: err.message,
+          });
+        }
+        if (result) {
+          res.json({
+            message: "Log in successful",
+            loggedIn: true,
+          });
+        } else {
+          res.json({
+            message: "Password does not match the account",
+          });
+        }
+      });
+    } else {
+      res.json({
+        message: "No user found",
+      });
     }
-  );
+  });
 };

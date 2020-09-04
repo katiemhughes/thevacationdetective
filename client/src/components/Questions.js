@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import Checkbox from "./Checkbox";
 import axios from "axios";
 
@@ -47,8 +48,8 @@ class Questions extends Component {
       })
       .catch((error) => {
         console.log(error);
-    });
-    
+      });
+
     this.setState({
       Museums: "",
       Beach: "",
@@ -72,7 +73,7 @@ class Questions extends Component {
     for (const checkbox of this.selectedCheckboxes) {
       console.log(checkbox, "is selected.");
     }
-};
+  };
 
   createCheckbox = (label) => (
     <Checkbox
@@ -96,6 +97,7 @@ class Questions extends Component {
                 Save
               </button>
             </form>
+            <Link to="/profile"><h3>Profile</h3></Link>
           </div>
         </div>
       </div>

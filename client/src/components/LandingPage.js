@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 class LandingPage extends React.Component {
   state = {
     email: null,
-    password: null
+    password: null,
   };
 
-//   handleChange = (e) => {
-//     this.setState({
-//       [e.target.name]: e.target.value,
-//     });
-//   };
+  //   handleChange = (e) => {
+  //     this.setState({
+  //       [e.target.name]: e.target.value,
+  //     });
+  //   };
 
-handleEmail = (e) => {
+  handleEmail = (e) => {
     this.setState({
       email: e.target.value,
     });
@@ -27,7 +27,7 @@ handleEmail = (e) => {
 
   handleSubmit = async (e) => {
     const response = await fetch(
-      "http://localhost:4500/vacationdetective/v1/signin",
+      "http://localhost:4500/vacationdetective/v1/signInAuthentication",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -52,7 +52,11 @@ handleEmail = (e) => {
           <h3>Email:</h3>
           <input type="text" name="email" onChange={this.handleEmail} />
           <h3>Password:</h3>
-          <input type="password" name="password" onChange={this.handlePassword} />
+          <input
+            type="password"
+            name="password"
+            onChange={this.handlePassword}
+          />
           <br />
           <button className="submit-btn" type="submit">
             Submit

@@ -32,6 +32,10 @@ const userSchema = new Schema({
     required: true,
     bcrypt: true,
   },
+  destinations: {
+    type: Array,
+    required: false,
+  },
 });
 
 userSchema.pre("save", function (next) {
@@ -44,3 +48,13 @@ userSchema.pre("save", function (next) {
 });
 
 const User = (module.exports = mongoose.model("User", userSchema));
+
+module.exports.updateUserPreferences = function (user, preferences) {
+  // take in user
+  // take in preferences
+  return User.findOneAndUpdate(
+    { _id: user.id },
+    { preferences: preferences },
+    { new: true }
+  );
+};

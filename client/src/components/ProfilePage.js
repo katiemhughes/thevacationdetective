@@ -12,8 +12,8 @@ class ProfilePage extends React.Component {
                 </div>
                 <div className="search-board">
                     <div className="sub-title-box">
-                        <h3 className="previous-searches">Previous searches</h3>
-                        <Link to="/questions"><h3 className="new-search">New Search</h3></Link>
+                        <h3 className="previous-searches">Previous searches:</h3>
+                        <Link to="/questions"><h3 className="submit-btn">New Search</h3></Link>
                     </div>
                     <div className="board-container">
                         <div className="board"></div>
@@ -21,7 +21,7 @@ class ProfilePage extends React.Component {
                         <div className="board"></div>
                     </div>
                 </div>
-                <Link to="/home"><h3>Sign out</h3></Link>
+                <Link to="/home"><h3 className="signup-home-link">Sign out</h3></Link>
 
             </div>
         )

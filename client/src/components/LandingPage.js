@@ -48,11 +48,11 @@ class LandingPage extends React.Component {
     return (
       <div className="signin-content-box">
         <h1>Welcome to Vacation Detective</h1>
-        <form>
-          <h3>Username/Email:</h3>
-          <input type="text" name="email" onChange={this.handleEmail} />
-          <h3>Password:</h3>
-          <input
+        <form className="form-box">
+          <label for="username/email">Username/Email:</label>
+          <input className="input-box" type="text" name="email" onChange={this.handleEmail} />
+          <label for="password">Password:</label>
+          <input className="input-box"
             type="password"
             name="password"
             onChange={this.handlePassword}
@@ -62,7 +62,7 @@ class LandingPage extends React.Component {
             Submit
           </button>
           <Link to="/signup">
-            <h3>Sign up</h3>
+            <h3 className="signup-home-link">Sign up</h3>
           </Link>
         </form>
       </div>

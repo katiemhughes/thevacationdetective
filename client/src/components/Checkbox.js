@@ -20,18 +20,18 @@ class Checkbox extends Component {
     const { isChecked } = this.state;
 
     return (
-      <div className="checkbox">
-        <label>
-          <input
-            type="checkbox"
-            value={label}
-            checked={isChecked}
-            onChange={this.toggleCheckboxChange}
-          />
-
-          {label}
-        </label>
-      </div>
+        <div className="checkbox">
+          <label for="destination">
+            <input className="checkbox-input"
+              name="destination"
+              type="checkbox"
+              value={label}
+              checked={isChecked}
+              onChange={this.toggleCheckboxChange}
+            />
+            {label}
+          </label>
+        </div>
     );
   }
 }

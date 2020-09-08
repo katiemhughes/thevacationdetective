@@ -15,24 +15,24 @@ class ProfilePage extends React.Component {
             userDestinations: "",
             userId: this.props.userId,
             checkboxes: [
-                { name: "museums", checked: false, id: 1 },
-                { name: "beach", checked: false, id: 2 },
-                { name: "mountains", checked: false, id: 3 },
-                { name: "hiking", checked: false, id: 4 },
-                { name: "jungle", checked: false, id: 5 },
-                { name: "wildlife", checked: false, id: 6 },
-                { name: "cityBreak", checked: false, id: 7 },
-                { name: "culturalEscape", checked: false, id: 8 },
-                { name: "skyScrappers", checked: false, id: 9 },
-                { name: "art", checked: false, id: 10 },
-                { name: "paradise", checked: false, id: 11 },
-                { name: "party", checked: false, id: 12 },
-                { name: "ancientMonuments", checked: false, id: 13 },
-                { name: "naturalWonder", checked: false, id: 14 },
-                { name: "highLife", checked: false, id: 15 },
-                { name: "desert", checked: false, id: 16 },
-                { name: "shopping", checked: false, id: 17 },
-                { name: "showCheckBoxes", checked: false, id: 18 },
+                { name: "Museums", checked: false, id: 1 },
+                { name: "Beach", checked: false, id: 2 },
+                { name: "Mountains", checked: false, id: 3 },
+                { name: "Hiking", checked: false, id: 4 },
+                { name: "Jungle", checked: false, id: 5 },
+                { name: "Wildlife", checked: false, id: 6 },
+                { name: "City Break", checked: false, id: 7 },
+                { name: "Cultural Escape", checked: false, id: 8 },
+                { name: "Skyscrapers", checked: false, id: 9 },
+                { name: "Art", checked: false, id: 10 },
+                { name: "Paradise", checked: false, id: 11 },
+                { name: "Party", checked: false, id: 12 },
+                { name: "Ancient Monuments", checked: false, id: 13 },
+                { name: "Natural Wonder", checked: false, id: 14 },
+                { name: "High Life", checked: false, id: 15 },
+                { name: "Desert", checked: false, id: 16 },
+                { name: "Shopping", checked: false, id: 17 },
+                { name: "CheckBoxes", checked: false, id: 18 },
             ],
         };
     }
@@ -117,7 +117,7 @@ class ProfilePage extends React.Component {
                       </div>
                     </div>
                     <div className="submit-button-box">
-                      <button type="submit">Submit</button>
+                      <button className="checkbox-submit-btn" type="submit">Submit</button>
                     </div>
                   </form>
                 </div>

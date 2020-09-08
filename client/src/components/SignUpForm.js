@@ -56,9 +56,10 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
-      <div className="signup-form-box">
-        <h1>Please fill out form below</h1>
-        <form>
+      <div className="wrapper">
+        <div className="signup-form-box">
+          <h1>Please fill out form below</h1>
+          <form>
           <div className="main-form-box">
             <div className="left-form-box">
               <label for="firstname">Name:</label>
@@ -88,6 +89,7 @@ class SignUpForm extends React.Component {
                 <h3 className="signup-home-link">Home</h3>
               </Link>
         </form>
+        </div>
       </div>
     );
   }

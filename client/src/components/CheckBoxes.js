@@ -110,7 +110,7 @@ class CheckBoxes extends React.Component {
     render() {
         // console.log(this.state.museums)
         return (
-            <div>
+            <div className="all-checkboxes-wrapper">
                 <form onSubmit={this.handleSubmit}>
                     <div className="museums-check">
                         <label>

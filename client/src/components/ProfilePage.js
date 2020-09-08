@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaTimesCircle } from "react-icons/fa";
 
 class ProfilePage extends React.Component {
     // state = {
@@ -166,15 +167,16 @@ class ProfilePage extends React.Component {
 
                 <div className="search-board">
                     <div className="sub-title-box">
-                        <h3 className="previous-searches">Previous searches</h3>
-                        <h3 onClick={this.handleSearchVisible} className="new-search">New Search</h3>
+                        <h3 onClick={this.handleSearchVisible} className="submit-btn">New Search</h3>
                     </div>
 
                     {this.state.showCheckBoxes
                         ? <div className="checkboxes">
                             <form onSubmit={this.handleSubmit}>
                                 <div className="checkbox-main-container">
-
+                                    <div className="close-search-container">
+                                        <h3 className="close-search" onClick={this.handleSeachHidden}><FaTimesCircle /></h3>
+                                    </div>
                                     <div className="checkbox-col">
                                         <div className="single-checkbox">
                                             <label>
@@ -302,15 +304,10 @@ class ProfilePage extends React.Component {
                                                     onChange={this.handleChangeShopping} /> Shopping
                                             </label><br />
                                         </div>
-
                                     </div>
-
-
-
                                 </div>
                                 <div className="submit-button-box">
                                     <button type="submit">Submit</button>
-                                    <h3 className="close-search" onClick={this.handleSeachHidden}>CloseSearch</h3>
                                 </div>
                             </form>
 
@@ -320,9 +317,14 @@ class ProfilePage extends React.Component {
 
 
                         : <div className="board-container">
-                            <div className="board"></div>
-                            <div className="board"></div>
-                            <div className="board"></div>
+                            <div className="previous-searches">
+                                <h3>Previous searches</h3>
+                            </div>
+                            <div className="boards">
+                                <div className="board"></div>
+                                <div className="board"></div>
+                                <div className="board"></div>
+                            </div>
                         </div>}
                 </div>
                 <Link to="/home"><h3 className="signup-home-link">Sign out</h3></Link>

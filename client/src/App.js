@@ -5,6 +5,7 @@ import LandingPage from "./components/LandingPage";
 import SignUpForm from "./components/SignUpForm";
 import Questions from "./components/Questions";
 import ProfilePage from "./components/ProfilePage";
+import CheckBoxes from "./components/CheckBoxes";
 
 class App extends React.Component {
   state = {};
@@ -17,6 +18,7 @@ class App extends React.Component {
             <Route path="/signup" component={SignUpForm} />
             <Route path="/questions" component={Questions} />
             <Route path="/profile" component={ProfilePage} />
+            <Route path="/checkboxes" component={CheckBoxes} />
           </div>
         </div>
       </BrowserRouter>

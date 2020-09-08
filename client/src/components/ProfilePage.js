@@ -2,140 +2,40 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class ProfilePage extends React.Component {
-    // state = {
-    //     userId: null,
-    //     beach: false,
-    //     checkbox: {
-    //         museums: false,
-    //         // beach: false,
-    //         mountains: false,
-    //         hiking: false,
-    //         jungle: false,
-    //         wildlife: false,
-    //         cityBreak: false,
-    //         culturalEscape: false,
-    //         skyScrappers: false,
-    //         art: false,
-    //         paradise: false,
-    //         party: false,
-    //         ancientMonuments: false,
-    //         naturalWonder: false,
-    //         highLife: false,
-    //         desert: false,
-    //         shopping: false,
-    //     },
-    //     destinationData: null,
-    //     showCheckBoxes: false,
-    // }
-
     state = {
         checkbox: {
             museums: false,
+            beach: false,
+            mountains: false,
+            hiking: false,
+            jungle: false,
+            wildlife: false,
+            cityBreak: false,
+            culturalEscape: false,
+            skyScrappers: false,
+            art: false,
+            paradise: false,
+            party: false,
+            ancientMonuments: false,
+            naturalWonder: false,
+            highLife: false,
+            desert: false,
+            shopping: false,
+
         },
-        beach: false,
-        mountains: false,
-        hiking: false,
-        jungle: false,
-        wildlife: false,
-        cityBreak: false,
-        culturalEscape: false,
-        skyScrappers: false,
-        art: false,
-        paradise: false,
-        party: false,
-        ancientMonuments: false,
-        naturalWonder: false,
-        highLife: false,
-        desert: false,
-        shopping: false,
-        destinationData: null,
         showCheckBoxes: false,
         userId: null,
+        destinationData: null,
     }
 
-    handleChangeMuseums = () => {
-        this.setState(initialState => ({
-            museums: !initialState.checkbox.museums,
-        }))
-    }
-    handleChangeBeach = () => {
-        this.setState(initialState => ({
-            beach: !initialState.beach,
-        }))
-    }
-    handleChangeMountains = () => {
-        this.setState(initialState => ({
-            mountains: !initialState.mountains,
-        }))
-    }
-    handleChangeHiking = () => {
-        this.setState(initialState => ({
-            hiking: !initialState.hiking,
-        }))
-    }
-    handleChangeJungle = () => {
-        this.setState(initialState => ({
-            jungle: !initialState.jungle,
-        }))
-    }
-    handleChangeWildlife = () => {
-        this.setState(initialState => ({
-            wildlife: !initialState.wildlife,
-        }))
-    }
-    handleChangeCityBreak = () => {
-        this.setState(initialState => ({
-            cityBreak: !initialState.cityBreak,
-        }))
-    }
-    handleChangeCulturalEscape = () => {
-        this.setState(initialState => ({
-            culturalEscape: !initialState.culturalEscape,
-        }))
-    }
-    handleChangeSkyScrappers = () => {
-        this.setState(initialState => ({
-            skyScrappers: !initialState.skyScrappers,
-        }))
-    }
-    handleChangeArt = () => {
-        this.setState(initialState => ({
-            art: !initialState.art,
-        }))
-    }
-    handleChangeParadise = () => {
-        this.setState(initialState => ({
-            paradise: !initialState.paradise,
-        }))
-    }
-    handleChangeParty = () => {
-        this.setState(initialState => ({
-            party: !initialState.party,
-        }))
-    }
-    handleChangeAncientMonuments = () => {
-        this.setState(initialState => ({
-            ancientMonuments: !initialState.ancientMonuments,
-        }))
-    }
-    handleChangeNaturalWonder = () => {
-        this.setState(initialState => ({
-            naturalWonder: !initialState.naturalWonder,
-        }))
-    }
-    handleChangeHighLife = () => {
-        this.setState(initialState => ({
-            highLife: !initialState.highLife,
-        }))
-    }
-    handleChangeDesert = () => {
-        this.setState(initialState => ({
-            desert: !initialState.desert,
-        }))
-    }
-    handleChangeShopping = () => {
-        this.setState(initialState => ({
-            shopping: !initialState.shopping,
+    handleCheckboxChange = (e) => {
+        const { name } = e.target;
+
+        this.setState(prevState => ({
+            checkbox: {
+                ...prevState.checkbox,
+                [name]: !prevState.checkbox[name]
+            }
         }))
     }
 
@@ -179,43 +79,49 @@ class ProfilePage extends React.Component {
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
-                                                    checked={this.state.checkbox.museums}
-                                                    onChange={this.handleChangeMuseums} /> Museums
+                                                    name="museums"
+                                                    checked={this.state.museums}
+                                                    onChange={this.handleCheckboxChange} /> Museums
                                             </label><br />
                                         </div>
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="beach"
                                                     checked={this.state.beach}
-                                                    onChange={this.handleChangeBeach} /> Beach
+                                                    onChange={this.handleCheckboxChange} /> Beach
                                             </label><br />
                                         </div>
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="mountains"
                                                     checked={this.state.mountains}
-                                                    onChange={this.handleChangeMountains} /> Mountains
+                                                    onChange={this.handleCheckboxChange} /> Mountains
                                             </label><br />
                                         </div>
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="hiking"
                                                     checked={this.state.hiking}
-                                                    onChange={this.handleChangeHiking} /> Hiking
+                                                    onChange={this.handleCheckboxChange} /> Hiking
                                             </label><br />
                                         </div>
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="jungle"
                                                     checked={this.state.jungle}
-                                                    onChange={this.handleChangeJungle} /> Jungle
+                                                    onChange={this.handleCheckboxChange} /> Jungle
                                             </label><br />
                                         </div>
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="wildlife"
                                                     checked={this.state.wildlife}
-                                                    onChange={this.handleChangeWildlife} /> Wildlife
+                                                    onChange={this.handleCheckboxChange} /> Wildlife
                                             </label><br />
                                         </div>
                                     </div>
@@ -225,43 +131,49 @@ class ProfilePage extends React.Component {
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="cityBreak"
                                                     checked={this.state.cityBreak}
-                                                    onChange={this.handleChangeCityBreak} /> City Break
+                                                    onChange={this.handleCheckboxChange} /> City Break
                                         </label><br />
                                         </div>
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="culturalEscape"
                                                     checked={this.state.culturalEscape}
-                                                    onChange={this.handleChangeCulturalEscape} /> Cultural Escape
+                                                    onChange={this.handleCheckboxChange} /> Cultural Escape
                                             </label><br />
                                         </div>
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="skyScrappers"
                                                     checked={this.state.skyScrappers}
-                                                    onChange={this.handleChangeSkyScrappers} /> Sky Scrappers
+                                                    onChange={this.handleCheckboxChange} /> Sky Scrappers
                                             </label><br />
                                         </div>
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="art"
                                                     checked={this.state.art}
-                                                    onChange={this.handleChangeArt} /> Art
+                                                    onChange={this.handleCheckboxChange} /> Art
                                             </label><br />
                                         </div>
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="paradise"
                                                     checked={this.state.paradise}
-                                                    onChange={this.handleChangeParadise} /> Paradise
+                                                    onChange={this.handleCheckboxChange} /> Paradise
                                             </label><br />
                                         </div>
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="party"
                                                     checked={this.state.party}
-                                                    onChange={this.handleChangeParty} /> Party
+                                                    onChange={this.handleCheckboxChange} /> Party
                                             </label><br />
                                         </div>
                                     </div>
@@ -270,36 +182,41 @@ class ProfilePage extends React.Component {
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="ancientMonuments"
                                                     checked={this.state.ancientMonuments}
-                                                    onChange={this.handleChangeAncientMonuments} /> Ancient Monuments
+                                                    onChange={this.handleCheckboxChange} /> Ancient Monuments
                                             </label><br />
                                         </div>
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="naturalWonder"
                                                     checked={this.state.naturalWonder}
-                                                    onChange={this.handleChangeNaturalWonder} /> Natural Wonders
+                                                    onChange={this.handleCheckboxChange} /> Natural Wonders
                                             </label><br />
                                         </div>
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="highLife"
                                                     checked={this.state.highLife}
-                                                    onChange={this.handleChangeHighLife} /> High Life
+                                                    onChange={this.handleCheckboxChange} /> High Life
                                             </label><br />
                                         </div>
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="desert"
                                                     checked={this.state.desert}
-                                                    onChange={this.handleChangeDesert} /> Desert
+                                                    onChange={this.handleCheckboxChange} /> Desert
                                             </label><br />
                                         </div>
                                         <div className="single-checkbox">
                                             <label>
                                                 <input type="checkbox"
+                                                    name="shopping"
                                                     checked={this.state.shopping}
-                                                    onChange={this.handleChangeShopping} /> Shopping
+                                                    onChange={this.handleCheckboxChange} /> Shopping
                                             </label><br />
                                         </div>
 

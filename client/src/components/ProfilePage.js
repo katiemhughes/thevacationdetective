@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaTimesCircle } from "react-icons/fa";
 import IndividualCheckbox from "./IndividualCheckbox";
 
 class ProfilePage extends React.Component {
@@ -85,58 +86,59 @@ class ProfilePage extends React.Component {
 
     render() {
         return (
-            <section className="profile-content-box">
-                <header className="header">
-                    <h1>Welcome back {this.state.userFirstName}</h1>
-                    <div className="profile-img"></div>
-                </header>
-                <main className="search-board">
-                    <div className="sub-title-box">
-                        <h3 className="previous-searches">Previous searches</h3>
-                        <h3 onClick={this.handleSearchVisible} className="new-search">
-                            New Search
-            </h3>
-                    </div>
-                    {this.state.showCheckBoxes ? (
-                        <div className="checkboxes">
-                            <form onSubmit={this.handleSubmit}>
-                                <div className="checkbox-main-container">
-                                    <div className="checkbox-col">
-                                        {this.state.checkboxes.map((checkbox, index) => {
-                                            return (
-                                                <>
-                                                    <IndividualCheckbox
-                                                        key={index}
-                                                        name={checkbox.name}
-                                                        click={() => this.handleSelect(index)}
-                                                    />
-                                                </>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-                                <div className="submit-button-box">
-                                    <button type="submit">Submit</button>
-                                    <h3 className="close-search" onClick={this.handleSeachHidden}>
-                                        Close Search
-                  </h3>
-                                </div>
-                            </form>
+          <section className="profile-content-box">
+            <header className="header">
+              <h1>Welcome back {this.state.userFirstName}</h1>
+              <div className="profile-img"></div>
+            </header>
+            <main className="search-board">
+              <div className="sub-title-box">
+                <h3 onClick={this.handleSearchVisible} className="submit-btn">New Search</h3>
+              </div>
+              {this.state.showCheckBoxes ? (
+                <div className="checkboxes">
+                  <form onSubmit={this.handleSubmit}>
+                    <div className="checkbox-main-container">
+                        <div className="close-search-container">
+                            <h3 className="close-search" onClick={this.handleSeachHidden}><FaTimesCircle /></h3>
                         </div>
-                    ) : (
-                            <div className="board-container">
-                                <div className="board"></div>
-                                <div className="board"></div>
-                                <div className="board"></div>
-                            </div>
-                        )}
-                </main>
-                <Link to="/">
-                    <h3>Sign out</h3>
-                </Link>
-            </section>
+                      <div className="checkbox-col">
+                        {this.state.checkboxes.map((checkbox, index) => {
+                          return (
+                            <>
+                              <IndividualCheckbox
+                                key={index}
+                                name={checkbox.name}
+                                click={() => this.handleSelect(index)}
+                              />
+                            </>
+                          );
+                        })}
+                      </div>
+                    </div>
+                    <div className="submit-button-box">
+                      <button type="submit">Submit</button>
+                    </div>
+                  </form>
+                </div>
+              ) : (
+                <div className="board-container">
+                    <div className="previous-searches">
+                        <h3>Previous searches</h3>
+                    </div>
+                  <div className="boards">
+                    <div className="board"></div>
+                    <div className="board"></div>
+                    <div className="board"></div>
+                  </div>
+                </div>
+              )}
+            </main>
+            <Link to="/">
+                <h3 className="signup-home-link">Sign out</h3>
+            </Link>
+          </section>
         );
+      }
     }
-}
-
-export default ProfilePage;
+    export default ProfilePage;

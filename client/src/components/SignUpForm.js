@@ -73,7 +73,7 @@ class SignUpForm extends React.Component {
               <input type="email" onChange={this.handleEmail} />
               <h3>Password:</h3>
               <input type="text" onChange={this.handlePassword} />
-              <Link to="/home">
+              <Link to="/">
                 <h3>Home</h3>
               </Link>
             </div>

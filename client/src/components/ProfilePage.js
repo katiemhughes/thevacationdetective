@@ -23,7 +23,7 @@ class ProfilePage extends React.Component {
         { name: "wildlife", checked: false, id: 6 },
         { name: "cityBreak", checked: false, id: 7 },
         { name: "culturalEscape", checked: false, id: 8 },
-        { name: "skyScrappers", checked: false, id: 9 },
+        { name: "skyscrapers", checked: false, id: 9 },
         { name: "art", checked: false, id: 10 },
         { name: "paradise", checked: false, id: 11 },
         { name: "party", checked: false, id: 12 },
@@ -32,8 +32,8 @@ class ProfilePage extends React.Component {
         { name: "highLife", checked: false, id: 15 },
         { name: "desert", checked: false, id: 16 },
         { name: "shopping", checked: false, id: 17 },
-        { name: "showCheckBoxes", checked: false, id: 18 },
       ],
+      showCheckBoxes: false,
     };
   }
   handleSelect = (index) => {

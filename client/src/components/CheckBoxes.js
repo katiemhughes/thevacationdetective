@@ -107,90 +107,58 @@ class CheckBoxes extends React.Component {
     console.log(this.state);
   };
 
-  render() {
-    // console.log(this.state.museums)
-    return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div className="museums-check">
-            <label>
-              <input
-                type="checkbox"
-                checked={this.state.museums}
-                onChange={this.handleChangeMuseums}
-              />{" "}
-              Museums
-            </label>
-            <br />
-            <label>
-              <input
-                type="checkbox"
-                checked={this.state.beach}
-                onChange={this.handleChangeBeach}
-              />{" "}
-              Beach
-            </label>
-            <br />
-            <label>
-              <input
-                type="checkbox"
-                checked={this.state.mountains}
-                onChange={this.handleChangeMountains}
-              />{" "}
-              Mountains
-            </label>
-            <br />
-            <label>
-              <input
-                type="checkbox"
-                checked={this.state.hiking}
-                onChange={this.handleChangeHiking}
-              />{" "}
-              Hiking
-            </label>
-            <br />
-            <label>
-              <input
-                type="checkbox"
-                checked={this.state.jungle}
-                onChange={this.handleChangeJungle}
-              />{" "}
-              Jungle
-            </label>
-            <br />
-            <label>
-              <input
-                type="checkbox"
-                checked={this.state.wildlife}
-                onChange={this.handleChangeWildLife}
-              />{" "}
-              WildLife
-            </label>
-            <br />
-            <label>
-              <input
-                type="checkbox"
-                checked={this.state.cityBreak}
-                onChange={this.handleChangeCityBreak}
-              />{" "}
-              City Break
-            </label>
-            <br />
-            <label>
-              <input
-                type="checkbox"
-                checked={this.state.culturalEscape}
-                onChange={this.handleChangeCulturalEscape}
-              />{" "}
-              Cultural Escape
-            </label>
-            <br />
-            <button type="submit">Submit</button>
-          </div>
-        </form>
-      </div>
-    );
-  }
+    render() {
+        // console.log(this.state.museums)
+        return (
+            <div className="all-checkboxes-wrapper">
+                <form onSubmit={this.handleSubmit}>
+                    <div className="museums-check">
+                        <label>
+                            <input type="checkbox"
+                                checked={this.state.museums}
+                                onChange={this.handleChangeMuseums} /> Museums
+                        </label><br />
+                        <label>
+                            <input type="checkbox"
+                                checked={this.state.beach}
+                                onChange={this.handleChangeBeach} /> Beach
+                        </label><br />
+                        <label>
+                            <input type="checkbox"
+                                checked={this.state.mountains}
+                                onChange={this.handleChangeMountains} /> Mountains
+                        </label><br />
+                        <label>
+                            <input type="checkbox"
+                                checked={this.state.hiking}
+                                onChange={this.handleChangeHiking} /> Hiking
+                        </label><br />
+                        <label>
+                            <input type="checkbox"
+                                checked={this.state.jungle}
+                                onChange={this.handleChangeJungle} /> Jungle
+                        </label><br />
+                        <label>
+                            <input type="checkbox"
+                                checked={this.state.wildlife}
+                                onChange={this.handleChangeWildLife} /> WildLife
+                        </label><br />
+                        <label>
+                            <input type="checkbox"
+                                checked={this.state.cityBreak}
+                                onChange={this.handleChangeCityBreak} /> City Break
+                        </label><br />
+                        <label>
+                            <input type="checkbox"
+                                checked={this.state.culturalEscape}
+                                onChange={this.handleChangeCulturalEscape} /> Cultural Escape
+                        </label><br />
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        )
+    }
 }
 
 export default CheckBoxes;

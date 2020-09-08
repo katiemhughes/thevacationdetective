@@ -87,21 +87,17 @@ class Questions extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-12">
-            <form onSubmit={this.handleFormSubmit}>
-              {this.createCheckboxes()}
-              <button className="btn btn-default" type="submit">
+      <div className="checkboxes-container">
+            <form className="checkboxes-form" onSubmit={this.handleFormSubmit}>
+              <div className="single-checkbox">
+                {this.createCheckboxes()}
+              </div>
+              <button className="submit-btn" type="submit">
                 Save
               </button>
+              <Link to="/profile"><h3 className="signup-home-link">Profile</h3></Link>
             </form>
-            <Link to="/profile">
-              <h3>Profile</h3>
-            </Link>
-          </div>
         </div>
-      </div>
     );
   }
 }

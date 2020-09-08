@@ -81,3 +81,32 @@
   width: 500px;
   display: flex;
 }
+
+/* CHECKBOXES DIV */
+.checkboxes {
+  width: 500px;
+  height: 250px;
+  background-color: white;
+}
+.single-checkbox {
+  height: 30px;
+  width: 119px;
+}
+.checkbox-main-container {
+  display: flex;
+}
+label {
+  font-size: 10px;
+}
+.checkbox-col {
+  width: 166px;
+  height: 225px;
+}
+.submit-button-box {
+  display: flex;
+  height: 20px;
+}
+.close-search {
+  margin-top: 0;
+  margin-left: 10px;
+}

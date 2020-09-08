@@ -43,6 +43,7 @@ function App() {
 
   function signIn() {
     if (isLoggedIn) {
+      setMessage(null);
       history.push("/profile");
     }
   }

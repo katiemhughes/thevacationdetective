@@ -92,7 +92,6 @@ class Questions extends Component {
           <div className="col-sm-12">
             <form onSubmit={this.handleFormSubmit}>
               {this.createCheckboxes()}
-
               <button className="btn btn-default" type="submit">
                 Save
               </button>

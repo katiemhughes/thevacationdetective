@@ -59,7 +59,7 @@ exports.signInAuthentication = function (req, res, next) {
           res.send({
             message: "Log in successful",
             isLoggedIn: true,
-            data: User.id,
+            data: user._id,
           });
         } else if (err) {
           res.json({
@@ -109,6 +109,26 @@ exports.addUserDestination = function (req, res, next) {
     } else {
       res.json({
         message: "User destination updated",
+        data: user,
+      });
+    }
+  });
+};
+
+exports.findUserById = function (req, res, next) {
+  const { userId } = req.body;
+  User.findById({ _id: userId }).then((user, err) => {
+    if (err) {
+      res.json({
+        message: err.message,
+      });
+    } else if (!user) {
+      res.json({
+        message: "No user has been found",
+      });
+    } else {
+      res.json({
+        message: "User found successfully",
         data: user,
       });
     }

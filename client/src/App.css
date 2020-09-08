@@ -4,7 +4,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 .wrapper {
   height: 450px;
@@ -21,7 +21,7 @@
   width: 500px;
 }
 .submit-btn {
-   margin-top: 25px;
+  margin-top: 25px;
 }
 
 /* SIGN UP FORM CSS */
@@ -87,12 +87,10 @@
   width: 500px;
   height: 250px;
   background-color: white;
-  
 }
 .single-checkbox {
   height: 30px;
   width: 119px;
-
 }
 .checkbox-main-container {
   display: flex;
@@ -107,7 +105,6 @@ label {
 .submit-button-box {
   display: flex;
   height: 20px;
-
 }
 .close-search {
   margin-top: 0;

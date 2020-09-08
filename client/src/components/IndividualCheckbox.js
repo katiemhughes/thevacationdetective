@@ -6,14 +6,12 @@ class IndividualCheckbox extends Component {
   }
   render() {
     return (
-      <div>
-        <div className="single-checkbox">
-          <label>
-            <input type="checkbox" onChange={this.props.click} />{" "}
-            {this.props.name}
-          </label>
-          <br />
-        </div>
+      <div className="single-checkbox">
+        <label>
+          <input type="checkbox" onChange={this.props.click} />{" "}
+          {this.props.name}
+        </label>
+        <br />
       </div>
     );
   }

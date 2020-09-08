@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Checkbox from "./Checkbox";
 import axios from "axios";
 
@@ -92,12 +92,13 @@ class Questions extends Component {
           <div className="col-sm-12">
             <form onSubmit={this.handleFormSubmit}>
               {this.createCheckboxes()}
-
               <button className="btn btn-default" type="submit">
                 Save
               </button>
             </form>
-            <Link to="/profile"><h3>Profile</h3></Link>
+            <Link to="/profile">
+              <h3>Profile</h3>
+            </Link>
           </div>
         </div>
       </div>

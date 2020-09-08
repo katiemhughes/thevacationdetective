@@ -4,7 +4,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 .wrapper {
   height: 450px;
@@ -21,7 +21,7 @@
   width: 500px;
 }
 .submit-btn {
-   margin-top: 25px;
+  margin-top: 25px;
 }
 
 /* SIGN UP FORM CSS */

@@ -5,7 +5,6 @@ import { Route } from "react-router-dom";
 import SignUpForm from "./components/SignUpForm";
 import Questions from "./components/Questions";
 import ProfilePage from "./components/ProfilePage.js";
-
 import "./App.css";
 
 function App() {

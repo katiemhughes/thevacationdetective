@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Checkbox from "./Checkbox";
 import axios from "axios";
 
@@ -97,7 +97,7 @@ class Questions extends Component {
               </button>
               <Link to="/profile"><h3 className="signup-home-link">Profile</h3></Link>
             </form>
-      </div>
+        </div>
     );
   }
 }

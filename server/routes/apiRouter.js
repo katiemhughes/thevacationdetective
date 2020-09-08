@@ -10,6 +10,7 @@ const {
   returnAllUsers,
   signInAuthentication,
   addUserDestination,
+  findUserById,
 } = require("../controllers/user");
 
 apiRouter.route("/");
@@ -18,11 +19,11 @@ apiRouter.route("/addUser").post(addUser);
 
 apiRouter.route("/returnAllUsers").get(returnAllUsers);
 
+apiRouter.route("/findUserById").post(findUserById);
+
 apiRouter.route("/addDestination").post(addDestination);
 
 apiRouter.route("/returnAllDestinations").get(returnAllDestinations);
-
-// apiRouter.route("/users/:id").post(addPreferences);
 
 apiRouter.route("/addUserDestination").post(addUserDestination);
 

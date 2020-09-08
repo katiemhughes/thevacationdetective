@@ -1,111 +1,111 @@
-import React from 'react';
+import React from "react";
 
 class CheckBoxes extends React.Component {
-    // state = {
-    //     museums: false,
-    //     beach: false,
-    //     mountains: false,
-    //     hiking: false,
-    //     jungle: false,
-    //     wildlife: false,
-    //     cityBreak: false,
-    //     culturalEscape: false,
-    //     skyScrappers: false,
-    //     art: false,
-    //     paradise: false,
-    //     party: false,
-    //     ancientMonuments: false,
-    //     naturalWonder: false,
-    //     highLife: false,
-    //     desert: false,
-    //     shopping: false,
-    // };
+  // state = {
+  //     museums: false,
+  //     beach: false,
+  //     mountains: false,
+  //     hiking: false,
+  //     jungle: false,
+  //     wildlife: false,
+  //     cityBreak: false,
+  //     culturalEscape: false,
+  //     skyScrappers: false,
+  //     art: false,
+  //     paradise: false,
+  //     party: false,
+  //     ancientMonuments: false,
+  //     naturalWonder: false,
+  //     highLife: false,
+  //     desert: false,
+  //     shopping: false,
+  // };
 
-    state = {
-        checkbox: {
-            museums: false,
-            beach: false,
-            mountains: false,
-            hiking: false,
-            jungle: false,
-            wildlife: false,
-            cityBreak: false,
-            culturalEscape: false,
-            skyScrappers: false,
-            art: false,
-            paradise: false,
-            party: false,
-            ancientMonuments: false,
-            naturalWonder: false,
-            highLife: false,
-            desert: false,
-            shopping: false,
-        }
-    };
+  state = {
+    checkbox: {
+      museums: false,
+      beach: false,
+      mountains: false,
+      hiking: false,
+      jungle: false,
+      wildlife: false,
+      cityBreak: false,
+      culturalEscape: false,
+      skyScrappers: false,
+      art: false,
+      paradise: false,
+      party: false,
+      ancientMonuments: false,
+      naturalWonder: false,
+      highLife: false,
+      desert: false,
+      shopping: false,
+    },
+  };
 
-    handleChangeMuseums = () => {
-        this.setState(initialState => ({
-            museums: !initialState.checkbox.museums,
-        }))
-    }
-    handleChangeBeach = () => {
-        this.setState(initialState => ({
-            beach: !initialState.checkbox.beach,
-        }))
-    }
-    handleChangeMountains = () => {
-        this.setState(initialState => ({
-            mountains: !initialState.checkbox.mountains,
-        }))
-    }
-    handleChangeHiking = () => {
-        this.setState(initialState => ({
-            hiking: !initialState.hiking,
-        }))
-    }
-    handleChangeJungle = () => {
-        this.setState(initialState => ({
-            jungle: !initialState.jungle,
-        }))
-    }
-    handleChangeWildLife = () => {
-        this.setState(initialState => ({
-            wildlife: !initialState.wildlife,
-        }))
-    }
-    handleChangeCityBreak = () => {
-        this.setState(initialState => ({
-            cityBreak: !initialState.cityBreak,
-        }))
-    }
-    handleChangeCulturalEscape = () => {
-        this.setState(initialState => ({
-            culturalEscape: !initialState.culturalEscape,
-        }))
-    }
+  handleChangeMuseums = () => {
+    this.setState((initialState) => ({
+      museums: !initialState.checkbox.museums,
+    }));
+  };
+  handleChangeBeach = () => {
+    this.setState((initialState) => ({
+      beach: !initialState.checkbox.beach,
+    }));
+  };
+  handleChangeMountains = () => {
+    this.setState((initialState) => ({
+      mountains: !initialState.checkbox.mountains,
+    }));
+  };
+  handleChangeHiking = () => {
+    this.setState((initialState) => ({
+      hiking: !initialState.hiking,
+    }));
+  };
+  handleChangeJungle = () => {
+    this.setState((initialState) => ({
+      jungle: !initialState.jungle,
+    }));
+  };
+  handleChangeWildLife = () => {
+    this.setState((initialState) => ({
+      wildlife: !initialState.wildlife,
+    }));
+  };
+  handleChangeCityBreak = () => {
+    this.setState((initialState) => ({
+      cityBreak: !initialState.cityBreak,
+    }));
+  };
+  handleChangeCulturalEscape = () => {
+    this.setState((initialState) => ({
+      culturalEscape: !initialState.culturalEscape,
+    }));
+  };
 
-    // handleSubmit = async (e) => {
-    //     const response = await fetch(
-    //         "http://localhost:4500/vacationdetective/v1/travelcriteria",
-    //         {
-    //             method: "POST",
-    //             headers: { "Conetent-Type": "application/json" },
-    //             body: JSON.stringify({
-    //                 museums: this.state.museums,
-    //                 beach: this.state.beach,
-    //                 mountains: this.state.mountains,
-    //             }),
-    //         }
-    //     );
-    //     e.preventDefault();
-    //     const data = await response.json();
-    //     console.log(data)
-    // }
+  // handleSubmit = async (e) => {
+  //     const response = await fetch(
+  //         "http://localhost:4500/vacationdetective/v1/travelcriteria",
+  //         {
+  //             method: "POST",
+  //             headers: { "Conetent-Type": "application/json" },
+  //             body: JSON.stringify({
+  //                 museums: this.state.museums,
+  //                 beach: this.state.beach,
+  //                 mountains: this.state.mountains,
+  //             }),
+  //         }
+  //     );
+  //     e.preventDefault();
+  //     const data = await response.json();
+  //     console.log(data)
+  // }
 
-    handleSubmit = (e) => {
-        e.preventDefault()
-        console.log(this.state)
-    }
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state);
+  };
 
     render() {
         // console.log(this.state.museums)

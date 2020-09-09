@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaTimesCircle } from "react-icons/fa";
 import IndividualCheckbox from "./IndividualCheckbox";
+import DestinationResults from "./DestinationResults";
 
 class ProfilePage extends React.Component {
   constructor(props) {
@@ -34,6 +35,7 @@ class ProfilePage extends React.Component {
         { name: "shopping", checked: false, id: 17 },
       ],
       showCheckBoxes: false,
+      isSubmitted: false,
     };
   }
   handleSelect = (index) => {
@@ -79,9 +81,10 @@ class ProfilePage extends React.Component {
       showCheckBoxes: false,
     });
   };
+
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    this.setState({ isSubmitted: true });
   };
 
   render() {
@@ -97,6 +100,9 @@ class ProfilePage extends React.Component {
               New Search
             </h3>
           </div>
+          {this.state.isSubmitted ? (
+            <DestinationResults preferences={this.state.checkboxes} />
+          ) : null}
           {this.state.showCheckBoxes ? (
             <div className="checkboxes">
               <form onSubmit={this.handleSubmit}>

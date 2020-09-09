@@ -28,7 +28,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "New Orleans",
     museums: true,
     beach: true,
@@ -54,7 +53,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Kerry, Ireland",
     museums: true,
     beach: false,
@@ -80,7 +78,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Marrakesh, Morocco",
     museums: false,
     beach: true,
@@ -106,7 +103,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Sydney",
     museums: false,
     beach: true,
@@ -132,7 +128,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "The Maldives",
     museums: false,
     beach: true,
@@ -158,7 +153,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Paris, France",
     museums: true,
     beach: false,
@@ -184,7 +178,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Cape Town, South Africa",
     museums: false,
     beach: true,
@@ -210,7 +203,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Dubai, U.A.E",
     museums: false,
     beach: true,
@@ -236,7 +228,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Bora Bora, French Polynesia",
     museums: false,
     beach: true,
@@ -262,7 +253,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "New York",
     museums: true,
     beach: false,
@@ -288,7 +278,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Dolomites, Italy",
     museums: false,
     beach: false,
@@ -314,7 +303,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Sossusvlei , Namibia",
     museums: false,
     beach: false,
@@ -340,7 +328,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Dubrovnik, Croatia",
     museums: false,
     beach: true,
@@ -366,7 +353,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Edinburgh, Scotland",
     museums: true,
     beach: false,
@@ -392,7 +378,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Rome, Italy",
     museums: true,
     beach: false,
@@ -418,7 +403,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Paro Valley, Bhutan",
     museums: false,
     beach: false,
@@ -444,7 +428,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Jaipur, India",
     museums: false,
     beach: false,
@@ -470,7 +453,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Waikato, New Zealand",
     museums: false,
     beach: false,
@@ -496,7 +478,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Havana, Cuba",
     Museums: false,
     Beach: true,
@@ -522,7 +503,6 @@ const destinations = [
 
   {
     rank: 0,
-
     country: "Tokyo, Japan",
     museums: false,
     beach: false,
@@ -547,7 +527,6 @@ const destinations = [
   },
   {
     rank: 0,
-
     country: "Antarctica",
     museums: false,
     beach: false,
@@ -572,7 +551,6 @@ const destinations = [
   },
   {
     rank: 0,
-
     country: "Vancouver, Canada",
     museums: true,
     beach: false,
@@ -597,7 +575,6 @@ const destinations = [
   },
   {
     rank: 0,
-
     country: "Los Angeles, USA",
     museums: false,
     beach: true,
@@ -622,7 +599,6 @@ const destinations = [
   },
   {
     rank: 0,
-
     country: "Kruger National Park, South Africa",
     museums: false,
     beach: false,
@@ -647,7 +623,6 @@ const destinations = [
   },
   {
     rank: 0,
-
     country: "Santorini, Greece",
     museums: false,
     beach: true,
@@ -672,7 +647,6 @@ const destinations = [
   },
   {
     rank: 0,
-
     country: "Saint Petersburg, Russia",
     museums: true,
     beach: false,
@@ -697,7 +671,6 @@ const destinations = [
   },
   {
     rank: 0,
-
     country: "Singapore",
     museums: false,
     beach: false,
@@ -722,7 +695,6 @@ const destinations = [
   },
   {
     rank: 0,
-
     country: "London, England",
     museums: true,
     beach: false,
@@ -747,7 +719,6 @@ const destinations = [
   },
   {
     rank: 0,
-
     country: "Rio de Janeiro, Brazil",
     museums: false,
     beach: true,
@@ -772,7 +743,6 @@ const destinations = [
   },
   {
     rank: 0,
-
     country: "Petra, Jordan",
     museums: false,
     beach: false,
@@ -797,7 +767,6 @@ const destinations = [
   },
   {
     rank: 0,
-
     country: "Hong Kong, China",
     museums: true,
     beach: false,
@@ -816,13 +785,13 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: true,
-    image: "https://unsplash.com/photos/4hluhoRJokI",
+    image:
+      "https://images.unsplash.com/photo-1536599018102-9f803c140fc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80",
     description:
       "Hong Kong is best known as a shoppers' paradise. There is, however, so much more to Hong Kong than shopping. Visitors can enjoy views of the city from high altitude, sample local food, celebrate festivals, watch sports competitions, and visit movie settings in the city.",
   },
   {
     rank: 0,
-
     country: "Barbados",
     museums: false,
     beach: true,
@@ -841,13 +810,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/RQ01QwLWBNc",
+    image:
+      "https://images.unsplash.com/photo-1588503707028-315007269eef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80",
     description:
       "Barbados is truly a unique tropical tourism destination. A 166 square mile gem of white sand beaches, a complex mix of high-class accommodation, made up of intimate guest-houses, small, medium and large hotels, luxury apartments, villas, and condominiums.",
   },
   {
     rank: 0,
-
     country: "Amsterdam, The Netherlands",
     museums: true,
     beach: false,
@@ -866,13 +835,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/oKc7vCb4SS4",
+    image:
+      "https://images.unsplash.com/photo-1571657370423-23ee8d7fd497?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1446&q=80",
     description:
       "Amsterdam is one of the greatest small cities in the world. From Amsterdam canals to world-famous Amsterdam museums and historical Amsterdam sights, it is one of the most romantic and beautiful cities in Europe. Canal cruises are a popular way to see the city from the perspective of its canals.",
   },
   {
     rank: 0,
-
     country: "Santiago, Chile",
     museums: false,
     beach: false,
@@ -891,13 +860,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://pixabay.com/photos/monument-general-baquedano-1475858/",
+    image:
+      "https://cdn.pixabay.com/photo/2016/06/23/17/41/monument-1475858_1280.jpg",
     description:
       "Santiago, capital of Chile. It lies on the canalized Mapocho River, with views of high Andean peaks to the east. The city has a downtown core of 19th-century neoclassical architecture and winding side-streets, dotted by art deco, neo-gothic, and other styles.",
   },
   {
     rank: 0,
-
     country: "Cairo, Egypt",
     museums: true,
     beach: false,
@@ -916,13 +885,13 @@ const destinations = [
     highLife: false,
     desert: true,
     shopping: false,
-    image: "https://unsplash.com/photos/XRcmriVYmA8",
+    image:
+      "https://images.unsplash.com/photo-1566192091743-5966a6079984?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80https://images.unsplash.com/photo-1566192091743-5966a6079984?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "It is one of the largest cities in the world and it is the largest in Africa. Cairo is known as being a very densely populated city as well as being the center of Egypt's culture and politics. It is also located near some of the most famous remnants of Ancient Egypt like the Pyramids of Giza.",
   },
   {
     rank: 0,
-
     country: "Copenhagen, Denmark",
     museums: true,
     beach: false,
@@ -941,13 +910,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/cj9_lderSUk",
+    image:
+      "https://images.unsplash.com/photo-1513622118278-bc041b3c13ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80",
     description:
       "The best way to describe Copenhagen over all is that it is a city that breathes Old World charm. Copenhagen is absolutely exploding with cultural events and activities, making it a fun and interesting place to visit whether it is for a family vacation or a romantic getaway.",
   },
   {
     rank: 0,
-
     country: "Seoul, South Korea",
     museums: false,
     beach: false,
@@ -966,13 +935,13 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: true,
-    image: "https://unsplash.com/photos/rHvBQyfLPjk",
+    image:
+      "https://images.unsplash.com/photo-1533577116850-9cc66cad8a9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Seoul has many temples and four major palaces such as Gyeongbokgung, one of the most famous. The city offers many other cultural and artistic attractions, such as the Museum of Art, which features traditional porcelain, textile and jewellery exhibits.",
   },
   {
     rank: 0,
-
     country: "Laucala Island Resort, Fiji",
     museums: false,
     beach: true,
@@ -991,13 +960,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/uAnF-0WLpZc",
+    image:
+      "https://images.unsplash.com/photo-1544670810-bfd713d1ae3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2389&q=80",
     description:
       "Set upon 3,500 exclusive acres Laucala private island resort is set amidst coconut plantations, sandy beaches, rich green mountains and breathtaking natural beauty. True luxury is appreciated in the privacy of the resort’s villas widely spread on the northern tip of the island. Diving in a unique underwater world, rain forest tours, horseback riding, surfing, golfing on the 18-hole championship course, or meeting native artists. Whether you choose to dine in your villa or to visit one of Laucala’s five restaurants and bars, you enjoy dishes based on the freshest produce.",
   },
   {
     rank: 0,
-
     country: "Providencia, Colombia",
     museums: false,
     beach: true,
@@ -1016,13 +985,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/pc-Zmc-L1sQ",
+    image:
+      "https://images.unsplash.com/photo-1585927432326-949bc9e7e7a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "When it comes to Caribbean Islands, or top places to see in Colombia, hardly anyone talks about San Andres and Providencia Islands (or Isla de Providencia). San Andres is a little overrun by tourism, so you can skip that one. But Providencia, now that is a Jewel in the Caribbean.",
   },
   {
     rank: 0,
-
     country: "Machu Picchu, Peru",
     museums: false,
     beach: false,
@@ -1041,13 +1010,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/-6HgP_ekYC4",
+    image:
+      "https://images.unsplash.com/photo-1461681922067-669418071e5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Machu Picchu was an Incan retreat for its emperor. Machu Picchu is a 15th-century Inca site located on a ridge between the Huayna Picchu and Machu Picchu mountains in Peru. It sits 7,970 feet (2,430 meters) above sea level on the eastern slope of the Andes and overlooks the Urubamba River hundreds of feet below.",
   },
   {
     rank: 0,
-
     country: "Virunga National Park, Democratic Republic of the Congo",
     museums: false,
     beach: false,
@@ -1066,13 +1035,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/_Z7QOai_dCE",
+    image:
+      "https://images.unsplash.com/photo-1579547056948-3bc828faf558?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Virunga National Park is a UNESCO World Heritage Site located in the east of the Democratic Republic of Congo. Virunga is the continent's most biologically diverse protected area and a national park embarking on an ambitious development programme known as the Virunga Alliance. You can see wild Silverback Gorillas here!",
   },
   {
     rank: 0,
-
     country: "Lisbon, Portugal",
     museums: true,
     beach: false,
@@ -1091,13 +1060,13 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/VFzacj8JUzM",
+    image:
+      "https://images.unsplash.com/photo-1542475393-3859feead00d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Lisbon is probably best known for its colonialist history, ornate architecture and tradition of Fado music. But some of its best features are in the everyday – spectacular hilltop vistas in Alfama or at St. George's Castle, pleasant year-round weather and friendly locals.",
   },
   {
     rank: 0,
-
     country: "Hanoi, Vietnam",
     museums: true,
     beach: true,
@@ -1116,13 +1085,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/2sCJgkinvyU",
+    image:
+      "https://unsplash.com/photos/2sCJgkinvyUhttps://images.unsplash.com/photo-1496310438464-0ce6b63f96bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Hanoi, located on the banks of the Red River, is one of the most ancient capitals in the world, where travellers can find well-preserved colonial buildings, ancient pagodas, and unique museums within the city centre.",
   },
   {
     rank: 0,
-
     country: "Hawaii, USA",
     museums: false,
     beach: true,
@@ -1141,13 +1110,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/COxhU-8uMTM",
+    image:
+      "https://images.unsplash.com/photo-1541865587657-7a998b6984dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1560&q=80",
     description:
       "The Hawaiian Islands are easily the most unique place in America, if not the entire world, and that's not just because it's a tropical island chain. ... More than 2,500 miles from the nearest landfall and formed by a series of active volcanoes, the Hawaiian Islands are certainly unique in their geology.",
   },
   {
     rank: 0,
-
     country: "Ibiza, Spain",
     museums: false,
     beach: true,
@@ -1166,13 +1135,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://pixabay.com/photos/ibiza-city-eivissa-alley-spain-4475750/",
+    image:
+      "https://cdn.pixabay.com/photo/2019/09/14/11/06/ibiza-4475750_1280.jpg",
     description:
       "One of the most famous, scenic and popular of the Balearic Islands is Ibiza. Although the island's size is relatively small, it is packed with amazing sights, attractions and things to do. Ibiza is widely known for its wild nightlife, but there is also plenty of other exciting things to do during the day.",
   },
   {
     rank: 0,
-
     country: "Beijing, China",
     museums: false,
     beach: false,
@@ -1191,13 +1160,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/yBroAF1cN3I",
+    image:
+      "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Beijing holds many magnificent sights that set national or even world records, including the Great Wall, the longest man-made structure in the world; the Forbidden City, the largest and best preserved ancient architectural complex in the world; and Tian'anmen Square, the largest famous city square in the world.",
   },
   {
     rank: 0,
-
     country: "Budapest, Hungary",
     museums: true,
     beach: false,
@@ -1216,13 +1185,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/qnUg1rdnUlk",
+    image:
+      "https://images.unsplash.com/photo-1565426873118-a17ed65d74b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1510&q=80",
     description:
       "Budapest is one of the most photogenic cities in Europe. The dramatic skyline that Budapest is most famous for is peppered with 19th-century architectural wonders alongside the Danube River. Notable landmarks include the majestic riverside Parliament Building and a collection of stunning basilicas.",
   },
   {
     rank: 0,
-
     country: "Cinque Terre, Italy",
     museums: false,
     beach: true,
@@ -1241,13 +1210,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/aRbhfdbq484",
+    image:
+      "https://images.unsplash.com/photo-1587723818999-d532b4dc23d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80",
     description:
       "Cinque Terre is the name of a district that encompasses five glorious towns, where small houses are surrounded by lush nature. Visitors to this district will be fascinated by the beauty of these five small villages, namely: Manarola, Riomaggiore, Corniglia, Vernazza and Monterosso al Mare.",
   },
   {
     rank: 0,
-
     country: "Buenos Aires, Argentina",
     museums: false,
     beach: true,
@@ -1266,13 +1235,13 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/VynkVKneWJA",
+    image:
+      "https://images.unsplash.com/photo-1495317823589-e67efe1524b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
     description:
       "In 2012, it was the most visited city in South America, and the second-most visited city of Latin America (behind Mexico City). It is known for its preserved Eclectic European architecture and rich cultural life. ... Buenos Aires is a multicultural city, being home to multiple ethnic and religious groups.",
   },
   {
     rank: 0,
-
     country: "Las Vegas, USA",
     museums: false,
     beach: false,
@@ -1291,13 +1260,13 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/fxe8jEGCdSg",
+    image:
+      "https://images.unsplash.com/photo-1570461803921-db8c035731f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80",
     description:
       "The city anchors the Las Vegas Valley metropolitan area and is the largest city within the greater Mojave Desert. Las Vegas is an internationally renowned major resort city, known primarily for its gambling, shopping, fine dining, entertainment, and nightlife.",
   },
   {
     rank: 0,
-
     country: "Matterhorn, Switzerland",
     museums: false,
     beach: false,
@@ -1316,7 +1285,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/ejzx-XRrLdc",
+    image:
+      "https://images.unsplash.com/photo-1585587218731-a1f785256989?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Out of all of the mountains that make up the Alps, the Matterhorn is probably the best known. Meaning “peak in the meadows” in German, the nearly 15,000-foot-tall mountain straddles the Swiss-Italian border and has long been a bucket list destination for climbers.",
   },

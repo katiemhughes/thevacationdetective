@@ -223,7 +223,7 @@ label {
 .checkbox-col {
   display: flex;
   flex-flow: row wrap;
-  justify-content: start;
+  justify-content: flex-start;
   align-content: center;
   width: 100%;
   height: 100%;

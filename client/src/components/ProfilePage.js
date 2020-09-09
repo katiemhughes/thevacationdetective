@@ -21,7 +21,7 @@ class ProfilePage extends React.Component {
         { name: "hiking", checked: false, id: 4 },
         { name: "jungle", checked: false, id: 5 },
         { name: "wildlife", checked: false, id: 6 },
-        { name: "cityBreak", checked: false, id: 7 },
+        { name: "citybreak", checked: false, id: 7 },
         { name: "culturalEscape", checked: false, id: 8 },
         { name: "skyscrapers", checked: false, id: 9 },
         { name: "art", checked: false, id: 10 },

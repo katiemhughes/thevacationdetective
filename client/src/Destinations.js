@@ -1,5 +1,3 @@
-const { FaMarsDouble } = require("react-icons/fa");
-
 const destinations = [
   {
     rank: 0,
@@ -21,7 +19,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/eE2trMn-6a0",
+    image:
+      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Bali Indonesia. Also known as the Land of the Gods, Bali appeals through its sheer natural beauty of looming volcanoes and lush terraced rice fields that exude peace and serenity. Bali enchants with its dramatic dances and colorful ceremonies, its arts, and crafts, to its luxurious beach resorts and exciting nightlife.",
   },
@@ -46,7 +45,8 @@ const destinations = [
     highLife: true,
     desert: true,
     shopping: true,
-    image: "https://unsplash.com/photos/sEoR_ea8KoE",
+    image:
+      "https://images.unsplash.com/photo-1525994886773-080587e161c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=748&q=80",
     description:
       "New Orleans is world-renowned for its distinct music, Creole cuisine, unique dialect, and its annual celebrations and festivals, most notably Mardi Gras. The historic heart of the city is the French Quarter, known for its French and Spanish Creole architecture and vibrant nightlife along Bourbon Street.",
   },
@@ -71,7 +71,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/pQuCwYXXZsk",
+    image:
+      "https://images.unsplash.com/photo-1531229232676-9ff6dd977b14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
     description:
       "The county is bounded on the west by the Atlantic Ocean and on the north by the River Shannon. Kerry is one of the most mountainous regions of Ireland and its three highest mountains, Carrauntoohil, Beenkeragh and Caher, all part of the MacGillycuddy's Reeks range.",
   },
@@ -96,7 +97,8 @@ const destinations = [
     highLife: false,
     desert: true,
     shopping: false,
-    image: "https://unsplash.com/photos/bnLF4mddpkc",
+    image:
+      "https://images.unsplash.com/photo-1583259529675-4338f4f241be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
     description:
       "Marrakech is the second largest city of Morocco and is known as the Red City. ... Like many north African cities it is mainly divided into medina which is the old fortified city and a modern city nearby (called Gueliz). The city has a wonder climate with shimmering white snowy winters and warm humid summers.",
   },
@@ -121,7 +123,8 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: true,
-    image: "https://unsplash.com/photos/7Zb7kUyQg1E",
+    image:
+      "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
     description:
       "Sydney, a coastal metropolis whose five million residents make it the largest city in Australia is famous for many things. The glittering harbour, complemented by landmarks like the Sydney Opera House and the Sydney Harbour Bridge. The dozens of sun-bathed beaches peppering the spectacular coastline.",
   },
@@ -146,7 +149,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/M1ObxvsWVhY",
+    image:
+      "https://images.unsplash.com/photo-1516815231560-8f41ec531527?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80",
     description:
       "The Maldives are known as the tropical paradise for reasons such as its beauty. This tropical country has separated islands and islands are surrounded by its own lagoon. Each island has pure white sandy beaches. The sea covers 99% of the Maldives and it is where you can see beautiful fishes and corals.",
   },
@@ -171,7 +175,8 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: true,
-    image: "https://unsplash.com/photos/t9Td0zfDTwI",
+    image:
+      "https://images.unsplash.com/photo-1550340499-a6c60fc8287c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
     description:
       "Paris is famous for its cafe culture, the Eiffel Tower, the Louvre, Notre Dame, the Moulin Rouge, pastries, and fashion. Paris is known for having beauty, elegance, and for being a boldly romantic city.",
   },
@@ -196,7 +201,8 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: true,
-    image: "https://unsplash.com/photos/FQ03xcur9As",
+    image:
+      "https://images.unsplash.com/photo-1588455471455-4b28e9ab3cd5?ixlib=rb-1.2.1&auto=format&fit=crop&w=803&q=80",
     description:
       "Known as the “Mother City”, Cape Town is the oldest city in South Africa. Perched between the ocean and the mountain, with a national park as its heart, there is nowhere like Cape Town. Cape Town, the “Mother City”, is the oldest city in South Africa and has a cultural heritage spanning more than 300 years",
   },
@@ -221,7 +227,8 @@ const destinations = [
     highLife: true,
     desert: true,
     shopping: true,
-    image: "https://unsplash.com/photos/DcyL0IoCY0A",
+    image:
+      "https://images.unsplash.com/flagged/photo-1559717201-fbb671ff56b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80",
     description:
       "Indulgent, glamorous, and progressive are words that describe Dubai. This United Arab Emirates city is a luxury travel destination for leisure and business travellers. Dubai combines a modern metropolis with a timeless sensibility and Arabian flair.",
   },
@@ -246,7 +253,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/OH6PkGB4JCU",
+    image:
+      "https://images.unsplash.com/photo-1518232197542-9325c59ecac9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
     Description:
       "Bora Bora is situated approximately 140 miles (225km) northwest of Tahiti, in the western Leeward group of the Society islands of French Polynesia. It is a rugged, volcanic, mountainous island featuring a large lagoon surrounded by beautiful coral reefs and islets.",
   },
@@ -271,7 +279,8 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: true,
-    image: "https://unsplash.com/photos/UExx0KnnkjY",
+    image:
+      "https://images.unsplash.com/photo-1522083165195-3424ed129620?ixlib=rb-1.2.1&auto=format&fit=crop&w=860&q=80",
     description:
       "New York is a bustling hub of economic activity, and it's also one of the main centers of US culture. New York is so central to American culture that it permeates almost all media. Whether it's an Avengers film or an iconic TV show like Friends, New York is well-represented in books, comics, music, movies, and more.",
   },
@@ -296,7 +305,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/UgbqncwR5bw",
+    image:
+      "https://images.unsplash.com/photo-1594164042850-8fde4faffc9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=792&q=80",
     description:
       "The site of the Dolomites comprises a mountain range in the northern Italian Alps, numbering 18 peaks which rise to above 3,000 metres and cover 141,903 ha. It features some of the most beautiful mountain landscapes anywhere, with vertical walls, sheer cliffs and a high density of narrow, deep and long valleys.",
   },
@@ -321,7 +331,8 @@ const destinations = [
     highLife: false,
     desert: true,
     shopping: false,
-    image: "https://unsplash.com/photos/S2Q5mdOrrVc",
+    image:
+      "https://images.unsplash.com/photo-1559160581-44bd4222d397?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
     description:
       "Set within the coastal desert of Namibia are the biggest sand dunes in the world. They attract a vast number of travellers each year, many of whom aim to climb up the sands and enjoy a thrilling slide back down. ... Due to its unique red sand, Sossusvlei is a must-see for many people when travelling to Africa.",
   },
@@ -346,7 +357,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/ohoBiu7_KNc",
+    image:
+      "https://images.unsplash.com/photo-1533331639-74f1863c7b3c?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
     description:
       "Popular for its spectacular seafront location on the Dalmatian Coast, coupled with its evocative and historic Old Town district, Dubrovnik is home to Croatia's artistic and intellectual elite and offers numerous cultural activities and festivals. Dubrovnik was the filming location for Kings Landing in the famous series a Game of Thrones. Yes, you can get Game of Thrones tours here!",
   },
@@ -371,7 +383,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: true,
-    image: "https://unsplash.com/photos/S56zN8cV5fk",
+    image:
+      "https://images.unsplash.com/photo-1535448033526-c0e85c9e6968?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
     description:
       "The city of Edinburgh is renowned world-wide for its history, architecture, scenery and cultural attractions. Built on a group of hills, it is situated between the Firth of Forth to the north, the Pentland Hills to the south, and the council areas of East Lothian and West Lothian to the east and west.",
   },
@@ -396,7 +409,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/s87bBFZviAU",
+    image:
+      "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
     description:
       "Rome (Italian: Roma), the Eternal City, is the capital and largest city of Italy and of the Lazio region. It is famous for being the home of the ancient Roman Empire, the Seven Hills, La Dolce Vita (the sweet life), the Vatican City and Three Coins in the Fountain.",
   },
@@ -421,7 +435,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/A87rz-MJN_E",
+    image:
+      "https://images.unsplash.com/photo-1542828810-3372a0020f50?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
     description:
       "Paro valley extends from the confluence of the Paro Chhu and the Wang Chhu rivers at Chuzom up to Mt. Jomolhari at the Tibetan border to the North. This picturesque region is one of the widest valleys in the kingdom and is covered in fertile rice fields and has a beautiful, crystalline river meandering down the valley.",
   },
@@ -446,7 +461,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/JKiYfDtQ_aA",
+    image:
+      "https://images.unsplash.com/photo-1534407672671-e77ce1342dc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
     description:
       "Jaipur, popularly known as the Pink City of India, is the largest city in the state of Rajasthan. It is also the capital of Rajasthan. Known for Hawa Mahal, Jal Mahal, Amer Fort, Jantar Mantar and several other places to visit, Jaipur has numerous stories to tell.",
   },
@@ -471,7 +487,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/7XKkJVw1d8c",
+    image:
+      "https://images.unsplash.com/photo-1462759353907-b2ea5ebd72e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80",
     description:
       "With incredible landscapes all over the place, a cave filled with glow worms (Waitomo), and the famous Lord of the Ring series being filmed here. There is a neverending list of reasons why you should visit this place. Just the fact that Hobbiton actually exists and is here should be reason enough!",
   },
@@ -479,25 +496,26 @@ const destinations = [
   {
     rank: 0,
     country: "Havana, Cuba",
-    Museums: false,
-    Beach: true,
-    Mountains: false,
-    Hiking: false,
-    Jungle: false,
-    Wildlife: false,
-    Citybreak: true,
-    CulturalEscape: true,
-    Skyscrapers: true,
-    Art: false,
-    Paradise: false,
-    Party: false,
-    AncientMonuments: false,
-    NaturalWonders: false,
-    HighLife: false,
-    Desert: false,
-    Shopping: false,
-    Image: "https://unsplash.com/photos/RqMIFcDLeos",
-    Description:
+    museums: false,
+    beach: true,
+    mountains: false,
+    hiking: false,
+    jungle: false,
+    wildlife: false,
+    citybreak: true,
+    culturalEscape: true,
+    skyscrapers: true,
+    art: false,
+    paradise: false,
+    party: false,
+    ancientMonuments: false,
+    naturalWonders: false,
+    highLife: false,
+    desert: false,
+    shopping: false,
+    image:
+      "https://images.unsplash.com/photo-1503192851959-c6da8ac80cff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+    description:
       "The canyon-like streets are filled with sleek 1950's American cars and breathtaking Spanish Colonial architecture, it's as though you've walked into a time capsule. Havana may be impoverished but it stands strong as a culturally rich city. This tourist-packed town is known as the gem of the Caribbean",
   },
 
@@ -521,7 +539,8 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: true,
-    image: "https://unsplash.com/photos/_noSmX8Kgoo",
+    image:
+      "https://images.unsplash.com/photo-1551641506-ee5bf4cb45f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=762&q=80",
     description:
       "Tokyo is famous for Anime, electronics, manga, and video games. Akihabara is the epicenter if it all. It becomes a jungle of electric lights and colors at night, providing a sensory overload for visitors. Getting lost, window shopping, and photography are top activities here.",
   },
@@ -545,7 +564,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/3Xd5j9-drDA",
+    image:
+      "https://images.unsplash.com/photo-1551415923-a2297c7fda79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80",
     description:
       "Antarctica is a desert. It does not rain or snow a lot there. When it snows, the snow does not melt and builds up over many years to make large, thick sheets of ice, called ice sheets. Antarctica is made up of lots of ice in the form of glaciers, ice shelves and icebergs.",
   },
@@ -569,7 +589,8 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: true,
-    image: "https://unsplash.com/photos/WHHY-iBp3aI",
+    image:
+      "https://images.unsplash.com/photo-1559511260-66a654ae982a?ixlib=rb-1.2.1&auto=format&fit=crop&w=792&q=80",
     description:
       "Majestic mountains, sparkling ocean, rainforests and beautiful foliage throughout all four seasons make Vancouver one of the most beautiful cities in the world. Canadians are known for our friendly nature, and Vancouver's citizens take great pride in our welcoming, clean, safe streets - day or night, all year round.",
   },
@@ -593,7 +614,8 @@ const destinations = [
     highLife: true,
     desert: true,
     shopping: true,
-    image: "https://unsplash.com/photos/UC8fvOyG5pU",
+    image:
+      "https://images.unsplash.com/photo-1523595857-fe9ee689f76f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80",
     description:
       "The city of Los Angeles (also known simply as L.A., and nicknamed the 'City of Angels') is the most populous city in California. Located on a broad basin in Southern California, the city is surrounded by vast mountain ranges, valleys, forests, beautiful beaches along the Pacific Ocean, and nearby desert.",
   },
@@ -617,7 +639,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/qj4s8GmD71g",
+    image:
+      "https://images.unsplash.com/photo-1594201791166-6b65cdc55a7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80",
     description:
       "The Greater Kruger National Park is South Africa's premier safari destination: it's the largest wildlife conservancy in Africa, set in one of the most accessible yet unspoilt wilderness areas in South Africa.",
   },
@@ -641,7 +664,8 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/MdTtpxGlrz8",
+    image:
+      "https://images.unsplash.com/photo-1563789031959-4c02bcb41319?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80",
     description:
       "Santorini is a volcanic island in the Cyclades group of the Greek islands. It is located between Ios and Anafi islands. It is famous for dramatic views, stunning sunsets from Oia town, the strange white aubergine (eggplant), the town of Thira and naturally its very own active volcano.",
   },
@@ -665,7 +689,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/7by0kvTWUjI",
+    image:
+      "https://images.unsplash.com/photo-1558682325-7cf48d328e34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1508&q=80",
     description:
       "St. Petersburg is a mecca of cultural, historical, and architectural landmarks. Founded by Tsar Peter I (the Great) as Russia's “window on Europe,” it bears the unofficial status of Russia's cultural capital and most European city, a distinction that it strives to retain in its perennial competition with Moscow.",
   },
@@ -689,7 +714,8 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: true,
-    image: "https://unsplash.com/photos/ahSFjjLru4Y",
+    image:
+      "https://images.unsplash.com/photo-1508597370841-836e72ef6f54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=749&q=80",
     description:
       "Singapore's tourism landscape has changed dramatically over the recent years, making the island-city even more vibrant and exciting as a destination. Additions in 2012 include diverse and new tourism products and developments such as the Marina Bay Cruise Centre, W Singapore Sentosa Cove and Gardens by the Bay.",
   },
@@ -713,7 +739,8 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/tZDtyUrYrFU",
+    image:
+      "https://images.unsplash.com/photo-1488747279002-c8523379faaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
     description:
       "Whether you're looking for art or architecture, food or football, London has been honed into a genuinely incredible city through its 2,000-year history. London is famous for its art, architecture, food and fashion, some of which it does better than anywhere else in the world.",
   },
@@ -737,7 +764,8 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/OkiDIla7K8Q",
+    image:
+      "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=798&q=80",
     description:
       "Known to Brazilians as 'Cidade Maravilhosa' (The Wonderful City), Rio de Janeiro is always brimming with color, sound, rhythm, and joy, which make it synonymous with Carnival, happiness, and beautiful people. Very few places in the world match the hospitality and natural charm in which Rio is perpetually swathed.",
   },
@@ -761,7 +789,8 @@ const destinations = [
     highLife: false,
     desert: true,
     shopping: false,
-    image: "https://unsplash.com/photos/mYEqvgcY1G4",
+    image:
+      "https://images.unsplash.com/photo-1589825274556-94746a018766?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
     description:
       "Petra is half-built, half-carved into the rock, and is surrounded by mountains riddled with passages and gorges. It is one of the world's most famous archaeological sites, where ancient Eastern traditions blend with Hellenistic architecture.",
   },
@@ -785,7 +814,8 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: true,
-    image: "https://unsplash.com/photos/4hluhoRJokI",
+    image:
+      "https://images.unsplash.com/photo-1536599018102-9f803c140fc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80",
     description:
       "Hong Kong is best known as a shoppers' paradise. There is, however, so much more to Hong Kong than shopping. Visitors can enjoy views of the city from high altitude, sample local food, celebrate festivals, watch sports competitions, and visit movie settings in the city.",
   },
@@ -809,7 +839,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/RQ01QwLWBNc",
+    image:
+      "https://images.unsplash.com/photo-1588503707028-315007269eef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80",
     description:
       "Barbados is truly a unique tropical tourism destination. A 166 square mile gem of white sand beaches, a complex mix of high-class accommodation, made up of intimate guest-houses, small, medium and large hotels, luxury apartments, villas, and condominiums.",
   },
@@ -833,7 +864,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/oKc7vCb4SS4",
+    image:
+      "https://images.unsplash.com/photo-1571657370423-23ee8d7fd497?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1446&q=80",
     description:
       "Amsterdam is one of the greatest small cities in the world. From Amsterdam canals to world-famous Amsterdam museums and historical Amsterdam sights, it is one of the most romantic and beautiful cities in Europe. Canal cruises are a popular way to see the city from the perspective of its canals.",
   },
@@ -857,7 +889,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://pixabay.com/photos/monument-general-baquedano-1475858/",
+    image:
+      "https://cdn.pixabay.com/photo/2016/06/23/17/41/monument-1475858_1280.jpg",
     description:
       "Santiago, capital of Chile. It lies on the canalized Mapocho River, with views of high Andean peaks to the east. The city has a downtown core of 19th-century neoclassical architecture and winding side-streets, dotted by art deco, neo-gothic, and other styles.",
   },
@@ -881,7 +914,8 @@ const destinations = [
     highLife: false,
     desert: true,
     shopping: false,
-    image: "https://unsplash.com/photos/XRcmriVYmA8",
+    image:
+      "https://images.unsplash.com/photo-1566192091743-5966a6079984?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80https://images.unsplash.com/photo-1566192091743-5966a6079984?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "It is one of the largest cities in the world and it is the largest in Africa. Cairo is known as being a very densely populated city as well as being the center of Egypt's culture and politics. It is also located near some of the most famous remnants of Ancient Egypt like the Pyramids of Giza.",
   },
@@ -905,7 +939,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/cj9_lderSUk",
+    image:
+      "https://images.unsplash.com/photo-1513622118278-bc041b3c13ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80",
     description:
       "The best way to describe Copenhagen over all is that it is a city that breathes Old World charm. Copenhagen is absolutely exploding with cultural events and activities, making it a fun and interesting place to visit whether it is for a family vacation or a romantic getaway.",
   },
@@ -929,7 +964,8 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: true,
-    image: "https://unsplash.com/photos/rHvBQyfLPjk",
+    image:
+      "https://images.unsplash.com/photo-1533577116850-9cc66cad8a9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Seoul has many temples and four major palaces such as Gyeongbokgung, one of the most famous. The city offers many other cultural and artistic attractions, such as the Museum of Art, which features traditional porcelain, textile and jewellery exhibits.",
   },
@@ -953,7 +989,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/uAnF-0WLpZc",
+    image:
+      "https://images.unsplash.com/photo-1544670810-bfd713d1ae3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2389&q=80",
     description:
       "Set upon 3,500 exclusive acres Laucala private island resort is set amidst coconut plantations, sandy beaches, rich green mountains and breathtaking natural beauty. True luxury is appreciated in the privacy of the resort’s villas widely spread on the northern tip of the island. Diving in a unique underwater world, rain forest tours, horseback riding, surfing, golfing on the 18-hole championship course, or meeting native artists. Whether you choose to dine in your villa or to visit one of Laucala’s five restaurants and bars, you enjoy dishes based on the freshest produce.",
   },
@@ -977,7 +1014,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/pc-Zmc-L1sQ",
+    image:
+      "https://images.unsplash.com/photo-1585927432326-949bc9e7e7a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "When it comes to Caribbean Islands, or top places to see in Colombia, hardly anyone talks about San Andres and Providencia Islands (or Isla de Providencia). San Andres is a little overrun by tourism, so you can skip that one. But Providencia, now that is a Jewel in the Caribbean.",
   },
@@ -1001,7 +1039,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/-6HgP_ekYC4",
+    image:
+      "https://images.unsplash.com/photo-1461681922067-669418071e5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Machu Picchu was an Incan retreat for its emperor. Machu Picchu is a 15th-century Inca site located on a ridge between the Huayna Picchu and Machu Picchu mountains in Peru. It sits 7,970 feet (2,430 meters) above sea level on the eastern slope of the Andes and overlooks the Urubamba River hundreds of feet below.",
   },
@@ -1025,7 +1064,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/_Z7QOai_dCE",
+    image:
+      "https://images.unsplash.com/photo-1579547056948-3bc828faf558?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Virunga National Park is a UNESCO World Heritage Site located in the east of the Democratic Republic of Congo. Virunga is the continent's most biologically diverse protected area and a national park embarking on an ambitious development programme known as the Virunga Alliance. You can see wild Silverback Gorillas here!",
   },
@@ -1049,7 +1089,8 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/VFzacj8JUzM",
+    image:
+      "https://images.unsplash.com/photo-1542475393-3859feead00d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Lisbon is probably best known for its colonialist history, ornate architecture and tradition of Fado music. But some of its best features are in the everyday – spectacular hilltop vistas in Alfama or at St. George's Castle, pleasant year-round weather and friendly locals.",
   },
@@ -1073,7 +1114,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/2sCJgkinvyU",
+    image:
+      "https://unsplash.com/photos/2sCJgkinvyUhttps://images.unsplash.com/photo-1496310438464-0ce6b63f96bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Hanoi, located on the banks of the Red River, is one of the most ancient capitals in the world, where travellers can find well-preserved colonial buildings, ancient pagodas, and unique museums within the city centre.",
   },
@@ -1097,7 +1139,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/COxhU-8uMTM",
+    image:
+      "https://images.unsplash.com/photo-1541865587657-7a998b6984dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1560&q=80",
     description:
       "The Hawaiian Islands are easily the most unique place in America, if not the entire world, and that's not just because it's a tropical island chain. ... More than 2,500 miles from the nearest landfall and formed by a series of active volcanoes, the Hawaiian Islands are certainly unique in their geology.",
   },
@@ -1121,7 +1164,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://pixabay.com/photos/ibiza-city-eivissa-alley-spain-4475750/",
+    image:
+      "https://cdn.pixabay.com/photo/2019/09/14/11/06/ibiza-4475750_1280.jpg",
     description:
       "One of the most famous, scenic and popular of the Balearic Islands is Ibiza. Although the island's size is relatively small, it is packed with amazing sights, attractions and things to do. Ibiza is widely known for its wild nightlife, but there is also plenty of other exciting things to do during the day.",
   },
@@ -1145,7 +1189,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/yBroAF1cN3I",
+    image:
+      "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Beijing holds many magnificent sights that set national or even world records, including the Great Wall, the longest man-made structure in the world; the Forbidden City, the largest and best preserved ancient architectural complex in the world; and Tian'anmen Square, the largest famous city square in the world.",
   },
@@ -1169,7 +1214,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/qnUg1rdnUlk",
+    image:
+      "https://images.unsplash.com/photo-1565426873118-a17ed65d74b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1510&q=80",
     description:
       "Budapest is one of the most photogenic cities in Europe. The dramatic skyline that Budapest is most famous for is peppered with 19th-century architectural wonders alongside the Danube River. Notable landmarks include the majestic riverside Parliament Building and a collection of stunning basilicas.",
   },
@@ -1193,7 +1239,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/aRbhfdbq484",
+    image:
+      "https://images.unsplash.com/photo-1587723818999-d532b4dc23d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80",
     description:
       "Cinque Terre is the name of a district that encompasses five glorious towns, where small houses are surrounded by lush nature. Visitors to this district will be fascinated by the beauty of these five small villages, namely: Manarola, Riomaggiore, Corniglia, Vernazza and Monterosso al Mare.",
   },
@@ -1217,7 +1264,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/VynkVKneWJA",
+    image:
+      "https://images.unsplash.com/photo-1495317823589-e67efe1524b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
     description:
       "In 2012, it was the most visited city in South America, and the second-most visited city of Latin America (behind Mexico City). It is known for its preserved Eclectic European architecture and rich cultural life. ... Buenos Aires is a multicultural city, being home to multiple ethnic and religious groups.",
   },
@@ -1241,7 +1289,8 @@ const destinations = [
     highLife: true,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/fxe8jEGCdSg",
+    image:
+      "https://images.unsplash.com/photo-1570461803921-db8c035731f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80",
     description:
       "The city anchors the Las Vegas Valley metropolitan area and is the largest city within the greater Mojave Desert. Las Vegas is an internationally renowned major resort city, known primarily for its gambling, shopping, fine dining, entertainment, and nightlife.",
   },
@@ -1265,7 +1314,8 @@ const destinations = [
     highLife: false,
     desert: false,
     shopping: false,
-    image: "https://unsplash.com/photos/ejzx-XRrLdc",
+    image:
+      "https://images.unsplash.com/photo-1585587218731-a1f785256989?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     description:
       "Out of all of the mountains that make up the Alps, the Matterhorn is probably the best known. Meaning “peak in the meadows” in German, the nearly 15,000-foot-tall mountain straddles the Swiss-Italian border and has long been a bucket list destination for climbers.",
   },

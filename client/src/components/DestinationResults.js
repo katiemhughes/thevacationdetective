@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import destinations from "../Destinations";
 import styled from "styled-components";
+import IndividualDestinations from "./IndividualDestinations";
 
 class DestinationResults extends Component {
   constructor(props) {
@@ -43,16 +44,9 @@ class DestinationResults extends Component {
     return (
       <StyledSection>
         <StyledDiv>
-          {this.state.hasData
-            ? this.state.results[0].map((result, index) => {
-                return (
-                  <div key={index}>
-                    <h1>{result.country}</h1>
-                    <p>{result.description}</p>
-                  </div>
-                );
-              })
-            : null}
+          {this.state.hasData ? (
+            <IndividualDestinations results={this.state.results[0]} />
+          ) : null}
         </StyledDiv>
       </StyledSection>
     );

@@ -1145,7 +1145,7 @@ const destinations = [
     desert: false,
     shopping: false,
     image:
-      "https://unsplash.com/photos/2sCJgkinvyUhttps://images.unsplash.com/photo-1496310438464-0ce6b63f96bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+      "https://images.unsplash.com/photo-1533497394934-b33cd9695ba9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
     description:
       "Hanoi, located on the banks of the Red River, is one of the most ancient capitals in the world, where travellers can find well-preserved colonial buildings, ancient pagodas, and unique museums within the city centre.",
   },

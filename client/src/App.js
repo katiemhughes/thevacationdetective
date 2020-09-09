@@ -5,7 +5,6 @@ import { Route } from "react-router-dom";
 import SignUpForm from "./components/SignUpForm";
 import ProfilePage from "./components/ProfilePage.js";
 import "./App.css";
-import HotelBed from "./components/HotelBed";
 
 function App() {
   const [username, setUsername] = useState(null);
@@ -62,7 +61,6 @@ function App() {
           />
         )}
       />
-      <HotelBed />
       <Route path="/signup" component={SignUpForm} />
       <Route path="/profile" render={() => <ProfilePage userId={userId} />} />
     </div>

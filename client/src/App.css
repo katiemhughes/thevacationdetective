@@ -245,3 +245,12 @@ label {
   padding: 1%;
   color: #023e8a;
 }
+
+.expandableDiv {
+  height: 500px;
+  transition: 2s;
+}
+
+.expandableDiv p {
+  visibility: visible;
+}

@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
 import { Route } from "react-router-dom";
 import SignUpForm from "./components/SignUpForm";
 import Questions from "./components/Questions";
 import ProfilePage from "./components/ProfilePage.js";
-
 import "./App.css";
+import HotelBed from "./components/HotelBed";
 
 function App() {
   const [username, setUsername] = useState(null);
   const [password, setPassword] = useState(null);
   const [message, setMessage] = useState(null);
   const [userId, setUserId] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -28,19 +29,26 @@ function App() {
       }
     )
       .then((response) => response.json())
-      .then((data) => signIn(data));
+      .then((data) => {
+        setUserId(data.data);
+        setIsLoggedIn(data.isLoggedIn);
+        setMessage(data.message);
+      });
   }
+
+  useEffect(() => {
+    signIn();
+  });
 
   let history = useHistory();
 
-  function signIn(data) {
-    setMessage(data.message);
-    console.log(data.isLoggedIn);
-    setUserId(data.data);
-    if (data.isLoggedIn) {
+  function signIn() {
+    if (isLoggedIn) {
+      setMessage(null);
       history.push("/profile");
     }
   }
+
   return (
     <div className="app">
       <Route
@@ -55,6 +63,7 @@ function App() {
           />
         )}
       />
+      <HotelBed />
       <Route path="/signup" component={SignUpForm} />
       <Route path="/questions" render={() => <Questions userId={userId} />} />
       <Route path="/profile" render={() => <ProfilePage userId={userId} />} />

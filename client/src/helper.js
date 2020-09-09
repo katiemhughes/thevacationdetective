@@ -1,21 +1,11 @@
 const destinations = require("./Destinations");
 console.log("Original number of destinations: ", destinations.length);
-fakeState = {
-  checkboxes: [
-    { name: "museums", checked: false, id: 1 },
-    { name: "beach", checked: true, id: 2 },
-    { name: "mountains", checked: true, id: 3 },
-    { name: "hiking", checked: true, id: 4 },
-  ],
-  destinationData: null,
-  showCheckBoxes: false,
-  userId: null,
-};
+
 //create the function (if it's not in the same file that you're calling it from, you're going to need to export the function out and then import it into the file you'll be calling it from)
 const masterFunction = (destinations, preferences) => {
   let userOutput = [];
   preferences.checkboxes.forEach((feature) => {
-    // forEAch is iterating through the array of checkboxes on your state object
+    // forEach is iterating through the array of checkboxes on your state object
     featureName = feature.name; // assigns the name of each feature/preference
     if (feature.checked === true) {
       destinations.forEach((destinationItem) => {

@@ -56,36 +56,40 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
-      <div className="signup-form-box">
-        <h1>Please fill out form below</h1>
-        <form>
+      <div className="wrapper">
+        <div className="signup-form-box">
+          <h1>Please fill out form below</h1>
+          <form>
           <div className="main-form-box">
             <div className="left-form-box">
-              <h3>Name:</h3>
-              <input type="text" onChange={this.handleFirstName} />
-              <h3>Surname:</h3>
-              <input type="text" onChange={this.handleLastName} />
-              <h3>Username:</h3>
-              <input type="text" onChange={this.handleUserName} />
+              <label for="firstname">Name:</label>
+              <input className="input-box" id="firstname" type="text" onChange={this.handleFirstName} />
+              <label for="surname">Surname:</label>
+              <input className="input-box" id="surname" type="text" onChange={this.handleLastName} />
+              <label for="username">Username:</label>
+              <input className="input-box" id="username" type="text" onChange={this.handleUserName} />
             </div>
             <div className="right-form-box">
-              <h3>Email:</h3>
-              <input type="email" onChange={this.handleEmail} />
-              <h3>Password:</h3>
-              <input type="text" onChange={this.handlePassword} />
-              <Link to="/home">
-                <h3>Home</h3>
-              </Link>
+              <label for="email">Email:</label>
+              <input className="input-box" id="email" type="email" onChange={this.handleEmail} />
+              <label for="password">Password:</label>
+              <input className="input-box" id="password" type="text" onChange={this.handlePassword} />
             </div>
           </div>
           <button
-            className="submit-signup-btn"
+            className="submit-btn"
             type="submit"
+            name="submit"
+            value="Submit Search"
             onClick={this.handleSubmit}
           >
             Submit
           </button>
+          <Link to="/">
+                <h3 className="signup-home-link">Home</h3>
+              </Link>
         </form>
+        </div>
       </div>
     );
   }

@@ -7,16 +7,18 @@ function LandingPage({ setPassword, setUsername, handleSubmit, message }) {
       <div className="wrapper">
         <div className="signin-content-box">
           <h1>Welcome to Vacation Detective</h1>
-          <form onSubmit={handleSubmit}>
-            <h3>Username/Email:</h3>
+          <form className="form-box" onSubmit={handleSubmit}>
+            <label for="username/email">Username/Email:</label>
             <input
+              className="input-box"
               type="text"
               name="email"
               autoComplete="on"
               onChange={(e) => setUsername(e.target.value)}
             />
-            <h3>Password:</h3>
+            <label for="password">Password:</label>
             <input
+              className="input-box"
               type="password"
               name="password"
               autoComplete="on"
@@ -24,13 +26,15 @@ function LandingPage({ setPassword, setUsername, handleSubmit, message }) {
             />
             <br />
             {message === null ? null : <p>{message}</p>}
+            <div className="buttons-wrapper">
             <button className="submit-btn" type="submit">
               Submit
             </button>
+            <Link to="/signup">
+              <h3 className="signup-home-link">Sign up</h3>
+            </Link>
+            </div> 
           </form>
-          <Link to="/signup">
-            <h3>Sign up</h3>
-          </Link>
         </div>
       </div>
     </>

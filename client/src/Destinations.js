@@ -1,3 +1,5 @@
+const { FaMarsDouble } = require("react-icons/fa");
+
 const destinations = [
   {
     rank: 0,

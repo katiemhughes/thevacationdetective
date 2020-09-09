@@ -6,6 +6,7 @@ import SignUpForm from "./components/SignUpForm";
 import Questions from "./components/Questions";
 import ProfilePage from "./components/ProfilePage.js";
 import "./App.css";
+import HotelBed from "./components/HotelBed";
 
 function App() {
   const [username, setUsername] = useState(null);
@@ -62,6 +63,7 @@ function App() {
           />
         )}
       />
+      <HotelBed />
       <Route path="/signup" component={SignUpForm} />
       <Route path="/questions" render={() => <Questions userId={userId} />} />
       <Route path="/profile" render={() => <ProfilePage userId={userId} />} />

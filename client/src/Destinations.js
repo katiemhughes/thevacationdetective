@@ -1,7 +1,8 @@
-import React from "react";
+const { FaMarsDouble } = require("react-icons/fa");
 
 const destinations = [
   {
+    rank: 0,
     country: "Bali, Indonesia",
     museums: false,
     beach: true,
@@ -26,6 +27,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "New Orleans",
     museums: true,
     beach: true,
@@ -50,6 +53,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Kerry, Ireland",
     museums: true,
     beach: false,
@@ -74,6 +79,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Marrakesh, Morocco",
     museums: false,
     beach: true,
@@ -98,6 +105,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Sydney",
     museums: false,
     beach: true,
@@ -122,6 +131,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "The Maldives",
     museums: false,
     beach: true,
@@ -146,6 +157,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Paris, France",
     museums: true,
     beach: false,
@@ -170,6 +183,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Cape Town, South Africa",
     museums: false,
     beach: true,
@@ -194,6 +209,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Dubai, U.A.E",
     museums: false,
     beach: true,
@@ -218,6 +235,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Bora Bora, French Polynesia",
     museums: false,
     beach: true,
@@ -242,6 +261,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "New York",
     museums: true,
     beach: false,
@@ -266,6 +287,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Dolomites, Italy",
     museums: false,
     beach: false,
@@ -290,6 +313,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Sossusvlei , Namibia",
     museums: false,
     beach: false,
@@ -314,6 +339,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Dubrovnik, Croatia",
     museums: false,
     beach: true,
@@ -338,6 +365,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Edinburgh, Scotland",
     museums: true,
     beach: false,
@@ -362,6 +391,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Rome, Italy",
     museums: true,
     beach: false,
@@ -386,6 +417,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Paro Valley, Bhutan",
     museums: false,
     beach: false,
@@ -410,6 +443,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Jaipur, India",
     museums: false,
     beach: false,
@@ -434,6 +469,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Waikato, New Zealand",
     museums: false,
     beach: false,
@@ -458,6 +495,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Havana, Cuba",
     Museums: false,
     Beach: true,
@@ -482,6 +521,8 @@ const destinations = [
   },
 
   {
+    rank: 0,
+
     country: "Tokyo, Japan",
     museums: false,
     beach: false,
@@ -505,6 +546,8 @@ const destinations = [
       "Tokyo is famous for Anime, electronics, manga, and video games. Akihabara is the epicenter if it all. It becomes a jungle of electric lights and colors at night, providing a sensory overload for visitors. Getting lost, window shopping, and photography are top activities here.",
   },
   {
+    rank: 0,
+
     country: "Antarctica",
     museums: false,
     beach: false,
@@ -528,6 +571,8 @@ const destinations = [
       "Antarctica is a desert. It does not rain or snow a lot there. When it snows, the snow does not melt and builds up over many years to make large, thick sheets of ice, called ice sheets. Antarctica is made up of lots of ice in the form of glaciers, ice shelves and icebergs.",
   },
   {
+    rank: 0,
+
     country: "Vancouver, Canada",
     museums: true,
     beach: false,
@@ -551,6 +596,8 @@ const destinations = [
       "Majestic mountains, sparkling ocean, rainforests and beautiful foliage throughout all four seasons make Vancouver one of the most beautiful cities in the world. Canadians are known for our friendly nature, and Vancouver's citizens take great pride in our welcoming, clean, safe streets - day or night, all year round.",
   },
   {
+    rank: 0,
+
     country: "Los Angeles, USA",
     museums: false,
     beach: true,
@@ -574,6 +621,8 @@ const destinations = [
       "The city of Los Angeles (also known simply as L.A., and nicknamed the 'City of Angels') is the most populous city in California. Located on a broad basin in Southern California, the city is surrounded by vast mountain ranges, valleys, forests, beautiful beaches along the Pacific Ocean, and nearby desert.",
   },
   {
+    rank: 0,
+
     country: "Kruger National Park, South Africa",
     museums: false,
     beach: false,
@@ -597,6 +646,8 @@ const destinations = [
       "The Greater Kruger National Park is South Africa's premier safari destination: it's the largest wildlife conservancy in Africa, set in one of the most accessible yet unspoilt wilderness areas in South Africa.",
   },
   {
+    rank: 0,
+
     country: "Santorini, Greece",
     museums: false,
     beach: true,
@@ -620,6 +671,8 @@ const destinations = [
       "Santorini is a volcanic island in the Cyclades group of the Greek islands. It is located between Ios and Anafi islands. It is famous for dramatic views, stunning sunsets from Oia town, the strange white aubergine (eggplant), the town of Thira and naturally its very own active volcano.",
   },
   {
+    rank: 0,
+
     country: "Saint Petersburg, Russia",
     museums: true,
     beach: false,
@@ -643,6 +696,8 @@ const destinations = [
       "St. Petersburg is a mecca of cultural, historical, and architectural landmarks. Founded by Tsar Peter I (the Great) as Russia's “window on Europe,” it bears the unofficial status of Russia's cultural capital and most European city, a distinction that it strives to retain in its perennial competition with Moscow.",
   },
   {
+    rank: 0,
+
     country: "Singapore",
     museums: false,
     beach: false,
@@ -666,6 +721,8 @@ const destinations = [
       "Singapore's tourism landscape has changed dramatically over the recent years, making the island-city even more vibrant and exciting as a destination. Additions in 2012 include diverse and new tourism products and developments such as the Marina Bay Cruise Centre, W Singapore Sentosa Cove and Gardens by the Bay.",
   },
   {
+    rank: 0,
+
     country: "London, England",
     museums: true,
     beach: false,
@@ -689,6 +746,8 @@ const destinations = [
       "Whether you're looking for art or architecture, food or football, London has been honed into a genuinely incredible city through its 2,000-year history. London is famous for its art, architecture, food and fashion, some of which it does better than anywhere else in the world.",
   },
   {
+    rank: 0,
+
     country: "Rio de Janeiro, Brazil",
     museums: false,
     beach: true,
@@ -712,6 +771,8 @@ const destinations = [
       "Known to Brazilians as 'Cidade Maravilhosa' (The Wonderful City), Rio de Janeiro is always brimming with color, sound, rhythm, and joy, which make it synonymous with Carnival, happiness, and beautiful people. Very few places in the world match the hospitality and natural charm in which Rio is perpetually swathed.",
   },
   {
+    rank: 0,
+
     country: "Petra, Jordan",
     museums: false,
     beach: false,
@@ -735,6 +796,8 @@ const destinations = [
       "Petra is half-built, half-carved into the rock, and is surrounded by mountains riddled with passages and gorges. It is one of the world's most famous archaeological sites, where ancient Eastern traditions blend with Hellenistic architecture.",
   },
   {
+    rank: 0,
+
     country: "Hong Kong, China",
     museums: true,
     beach: false,
@@ -758,6 +821,8 @@ const destinations = [
       "Hong Kong is best known as a shoppers' paradise. There is, however, so much more to Hong Kong than shopping. Visitors can enjoy views of the city from high altitude, sample local food, celebrate festivals, watch sports competitions, and visit movie settings in the city.",
   },
   {
+    rank: 0,
+
     country: "Barbados",
     museums: false,
     beach: true,
@@ -781,6 +846,8 @@ const destinations = [
       "Barbados is truly a unique tropical tourism destination. A 166 square mile gem of white sand beaches, a complex mix of high-class accommodation, made up of intimate guest-houses, small, medium and large hotels, luxury apartments, villas, and condominiums.",
   },
   {
+    rank: 0,
+
     country: "Amsterdam, The Netherlands",
     museums: true,
     beach: false,
@@ -804,6 +871,8 @@ const destinations = [
       "Amsterdam is one of the greatest small cities in the world. From Amsterdam canals to world-famous Amsterdam museums and historical Amsterdam sights, it is one of the most romantic and beautiful cities in Europe. Canal cruises are a popular way to see the city from the perspective of its canals.",
   },
   {
+    rank: 0,
+
     country: "Santiago, Chile",
     museums: false,
     beach: false,
@@ -827,6 +896,8 @@ const destinations = [
       "Santiago, capital of Chile. It lies on the canalized Mapocho River, with views of high Andean peaks to the east. The city has a downtown core of 19th-century neoclassical architecture and winding side-streets, dotted by art deco, neo-gothic, and other styles.",
   },
   {
+    rank: 0,
+
     country: "Cairo, Egypt",
     museums: true,
     beach: false,
@@ -850,6 +921,8 @@ const destinations = [
       "It is one of the largest cities in the world and it is the largest in Africa. Cairo is known as being a very densely populated city as well as being the center of Egypt's culture and politics. It is also located near some of the most famous remnants of Ancient Egypt like the Pyramids of Giza.",
   },
   {
+    rank: 0,
+
     country: "Copenhagen, Denmark",
     museums: true,
     beach: false,
@@ -873,6 +946,8 @@ const destinations = [
       "The best way to describe Copenhagen over all is that it is a city that breathes Old World charm. Copenhagen is absolutely exploding with cultural events and activities, making it a fun and interesting place to visit whether it is for a family vacation or a romantic getaway.",
   },
   {
+    rank: 0,
+
     country: "Seoul, South Korea",
     museums: false,
     beach: false,
@@ -896,6 +971,8 @@ const destinations = [
       "Seoul has many temples and four major palaces such as Gyeongbokgung, one of the most famous. The city offers many other cultural and artistic attractions, such as the Museum of Art, which features traditional porcelain, textile and jewellery exhibits.",
   },
   {
+    rank: 0,
+
     country: "Laucala Island Resort, Fiji",
     museums: false,
     beach: true,
@@ -919,6 +996,8 @@ const destinations = [
       "Set upon 3,500 exclusive acres Laucala private island resort is set amidst coconut plantations, sandy beaches, rich green mountains and breathtaking natural beauty. True luxury is appreciated in the privacy of the resort’s villas widely spread on the northern tip of the island. Diving in a unique underwater world, rain forest tours, horseback riding, surfing, golfing on the 18-hole championship course, or meeting native artists. Whether you choose to dine in your villa or to visit one of Laucala’s five restaurants and bars, you enjoy dishes based on the freshest produce.",
   },
   {
+    rank: 0,
+
     country: "Providencia, Colombia",
     museums: false,
     beach: true,
@@ -942,6 +1021,8 @@ const destinations = [
       "When it comes to Caribbean Islands, or top places to see in Colombia, hardly anyone talks about San Andres and Providencia Islands (or Isla de Providencia). San Andres is a little overrun by tourism, so you can skip that one. But Providencia, now that is a Jewel in the Caribbean.",
   },
   {
+    rank: 0,
+
     country: "Machu Picchu, Peru",
     museums: false,
     beach: false,
@@ -965,6 +1046,8 @@ const destinations = [
       "Machu Picchu was an Incan retreat for its emperor. Machu Picchu is a 15th-century Inca site located on a ridge between the Huayna Picchu and Machu Picchu mountains in Peru. It sits 7,970 feet (2,430 meters) above sea level on the eastern slope of the Andes and overlooks the Urubamba River hundreds of feet below.",
   },
   {
+    rank: 0,
+
     country: "Virunga National Park, Democratic Republic of the Congo",
     museums: false,
     beach: false,
@@ -988,6 +1071,8 @@ const destinations = [
       "Virunga National Park is a UNESCO World Heritage Site located in the east of the Democratic Republic of Congo. Virunga is the continent's most biologically diverse protected area and a national park embarking on an ambitious development programme known as the Virunga Alliance. You can see wild Silverback Gorillas here!",
   },
   {
+    rank: 0,
+
     country: "Lisbon, Portugal",
     museums: true,
     beach: false,
@@ -1011,6 +1096,8 @@ const destinations = [
       "Lisbon is probably best known for its colonialist history, ornate architecture and tradition of Fado music. But some of its best features are in the everyday – spectacular hilltop vistas in Alfama or at St. George's Castle, pleasant year-round weather and friendly locals.",
   },
   {
+    rank: 0,
+
     country: "Hanoi, Vietnam",
     museums: true,
     beach: true,
@@ -1034,6 +1121,8 @@ const destinations = [
       "Hanoi, located on the banks of the Red River, is one of the most ancient capitals in the world, where travellers can find well-preserved colonial buildings, ancient pagodas, and unique museums within the city centre.",
   },
   {
+    rank: 0,
+
     country: "Hawaii, USA",
     museums: false,
     beach: true,
@@ -1057,6 +1146,8 @@ const destinations = [
       "The Hawaiian Islands are easily the most unique place in America, if not the entire world, and that's not just because it's a tropical island chain. ... More than 2,500 miles from the nearest landfall and formed by a series of active volcanoes, the Hawaiian Islands are certainly unique in their geology.",
   },
   {
+    rank: 0,
+
     country: "Ibiza, Spain",
     museums: false,
     beach: true,
@@ -1080,6 +1171,8 @@ const destinations = [
       "One of the most famous, scenic and popular of the Balearic Islands is Ibiza. Although the island's size is relatively small, it is packed with amazing sights, attractions and things to do. Ibiza is widely known for its wild nightlife, but there is also plenty of other exciting things to do during the day.",
   },
   {
+    rank: 0,
+
     country: "Beijing, China",
     museums: false,
     beach: false,
@@ -1103,6 +1196,8 @@ const destinations = [
       "Beijing holds many magnificent sights that set national or even world records, including the Great Wall, the longest man-made structure in the world; the Forbidden City, the largest and best preserved ancient architectural complex in the world; and Tian'anmen Square, the largest famous city square in the world.",
   },
   {
+    rank: 0,
+
     country: "Budapest, Hungary",
     museums: true,
     beach: false,
@@ -1126,6 +1221,8 @@ const destinations = [
       "Budapest is one of the most photogenic cities in Europe. The dramatic skyline that Budapest is most famous for is peppered with 19th-century architectural wonders alongside the Danube River. Notable landmarks include the majestic riverside Parliament Building and a collection of stunning basilicas.",
   },
   {
+    rank: 0,
+
     country: "Cinque Terre, Italy",
     museums: false,
     beach: true,
@@ -1149,6 +1246,8 @@ const destinations = [
       "Cinque Terre is the name of a district that encompasses five glorious towns, where small houses are surrounded by lush nature. Visitors to this district will be fascinated by the beauty of these five small villages, namely: Manarola, Riomaggiore, Corniglia, Vernazza and Monterosso al Mare.",
   },
   {
+    rank: 0,
+
     country: "Buenos Aires, Argentina",
     museums: false,
     beach: true,
@@ -1172,6 +1271,8 @@ const destinations = [
       "In 2012, it was the most visited city in South America, and the second-most visited city of Latin America (behind Mexico City). It is known for its preserved Eclectic European architecture and rich cultural life. ... Buenos Aires is a multicultural city, being home to multiple ethnic and religious groups.",
   },
   {
+    rank: 0,
+
     country: "Las Vegas, USA",
     museums: false,
     beach: false,
@@ -1195,6 +1296,8 @@ const destinations = [
       "The city anchors the Las Vegas Valley metropolitan area and is the largest city within the greater Mojave Desert. Las Vegas is an internationally renowned major resort city, known primarily for its gambling, shopping, fine dining, entertainment, and nightlife.",
   },
   {
+    rank: 0,
+
     country: "Matterhorn, Switzerland",
     museums: false,
     beach: false,
@@ -1219,4 +1322,4 @@ const destinations = [
   },
 ];
 
-export default destinations;
+module.exports = destinations;

@@ -1,4 +1,4 @@
-import React from "react";
+const { FaMarsDouble } = require("react-icons/fa");
 
 const destinations = [
   {

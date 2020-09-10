@@ -45,7 +45,10 @@ class DestinationResults extends Component {
       <StyledSection>
         <StyledDiv>
           {this.state.hasData ? (
-            <IndividualDestinations results={this.state.results[0]} />
+            <IndividualDestinations
+              results={this.state.results[0]}
+              userId={this.props.userId}
+            />
           ) : null}
         </StyledDiv>
       </StyledSection>

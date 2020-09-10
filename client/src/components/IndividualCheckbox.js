@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 
 class IndividualCheckbox extends Component {
   constructor(props) {
@@ -20,15 +21,26 @@ class IndividualCheckbox extends Component {
   }
   render() {
     return (
-      <div className="single-checkbox">
+      <SingleCheckbox>
         <label>
-          <input type="checkbox" onChange={this.props.click} />{" "}
+          <input
+            type="checkbox"
+            index={this.props.index}
+            onChange={this.props.handleSelect}
+          />{" "}
           {this.state.names}
         </label>
-        <br />
-      </div>
+      </SingleCheckbox>
     );
   }
 }
 
 export default IndividualCheckbox;
+
+const SingleCheckbox = styled.div`
+  height: 20px;
+  width: 120px;
+  margin: 15px;
+  display: flex;
+  font-size: 18px;
+`;

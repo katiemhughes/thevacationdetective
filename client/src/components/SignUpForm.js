@@ -1,79 +1,82 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 
-class SignUpForm extends React.Component {
-  state = {
-    firstName: null,
-    lastName: null,
-    userName: null,
-    email: null,
-    password: null,
-  };
+const SignUpForm = () => {
+  const [firstName, setFirstName] = useState(null);
+  const [lastName, setLastName] = useState(null);
+  const [userName, setUserName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
 
-  handleFirstName = (e) => {
-    this.setState({
-      firstName: e.target.value,
-    });
-  };
-
-  handleLastName = (e) => {
-    this.setState({
-      lastName: e.target.value,
-    });
-  };
-
-  handleUserName = (e) => {
-    this.setState({
-      userName: e.target.value,
-    });
-  };
-
-  handleEmail = (e) => {
-    this.setState({
-      email: e.target.value,
-    });
-  };
-
-  handlePassword = (e) => {
-    this.setState({
-      password: e.target.value,
-    });
-  };
-
-  handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     await fetch("http://localhost:4500/vacationdetective/v1/addUser", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        firstName: this.state.firstName,
-        lastName: this.state.lastName,
-        userName: this.state.userName,
-        email: this.state.email,
-        password: this.state.password,
+        firstName: firstName,
+        lastName: lastName,
+        userName: userName,
+        email: email,
+        password: password,
       }),
-    });
+    })
+      .then((response) => response.json())
+      .then((data) => savedSuccessfully(data));
   };
 
-  render() {
-    return (
-      <div className="wrapper">
-        <div className="signup-form-box">
-          <h1>Please fill out form below</h1>
-          <form>
+  let history = useHistory();
+
+  const savedSuccessfully = (data) => {
+    if (data.success === true) {
+      history.push("/");
+    }
+  };
+
+  return (
+    <div className="wrapper">
+      <div className="signup-form-box">
+        <h1>Please fill out form below</h1>
+        <form>
           <div className="main-form-box">
             <div className="left-form-box">
-              <label for="firstname">Name:</label>
-              <input className="input-box" id="firstname" type="text" onChange={this.handleFirstName} />
+              <label for="firstname">First Name:</label>
+              <input
+                className="input-box"
+                id="firstname"
+                type="text"
+                onChange={(e) => setFirstName(e.target.value)}
+              />
               <label for="surname">Surname:</label>
-              <input className="input-box" id="surname" type="text" onChange={this.handleLastName} />
+              <input
+                className="input-box"
+                id="surname"
+                type="text"
+                onChange={(e) => setLastName(e.target.value)}
+              />
               <label for="username">Username:</label>
-              <input className="input-box" id="username" type="text" onChange={this.handleUserName} />
+              <input
+                className="input-box"
+                id="username"
+                type="text"
+                onChange={(e) => setUserName(e.target.value)}
+              />
             </div>
             <div className="right-form-box">
               <label for="email">Email:</label>
-              <input className="input-box" id="email" type="email" onChange={this.handleEmail} />
+              <input
+                className="input-box"
+                id="email"
+                type="email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
               <label for="password">Password:</label>
-              <input className="input-box" id="password" type="text" onChange={this.handlePassword} />
+              <input
+                className="input-box"
+                id="password"
+                type="text"
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </div>
           </div>
           <button
@@ -81,18 +84,17 @@ class SignUpForm extends React.Component {
             type="submit"
             name="submit"
             value="Submit Search"
-            onClick={this.handleSubmit}
+            onClick={handleSubmit}
           >
             Submit
           </button>
           <Link to="/">
-                <h3 className="signup-home-link">Home</h3>
-              </Link>
+            <h3 className="signup-home-link">Home</h3>
+          </Link>
         </form>
-        </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default SignUpForm;

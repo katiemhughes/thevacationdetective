@@ -13,6 +13,7 @@
   width: 60vw;
   padding: 4.5%;
   background-color: #00b4d8;
+  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,5 +244,24 @@ label {
 .close-search {
   cursor: pointer;
   padding: 1%;
+  color: #023e8a;
+}
+
+.signOutButton {
+  height: 40px;
+  width: 85px;
+  background-color: #fff;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #023e8a;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.signOutButton:active {
+  transform: scale(0.95, 0.95);
   color: #023e8a;
 }

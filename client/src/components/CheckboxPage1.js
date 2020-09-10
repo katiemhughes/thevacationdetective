@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import { FaTimesCircle } from "react-icons/fa";
 import styled from "styled-components";
 import FlippingCard from "./FlippingCard";
-import profileImage from "../images/profileImage.png";
+//import profileImage from "../images/profileImage.png";
 
 class CheckboxPage1 extends React.Component {
   constructor(props) {
@@ -39,7 +39,7 @@ class CheckboxPage1 extends React.Component {
       isSubmitted: false,
       dataReceived: false,
       flipped: false,
-      profileImg: profileImage,
+      //profileImg: profileImage,
     };
   }
 
@@ -105,7 +105,7 @@ class CheckboxPage1 extends React.Component {
 
         <ProfileSection>
           <ProfileImgDiv>
-            <ProfileImg src={this.state.profileImg} alt="" />
+            {/* <ProfileImg src={this.state.profileImg} alt="" /> */}
           </ProfileImgDiv>
           <UserInfoDiv>
             <h2>
@@ -200,11 +200,11 @@ const ProfileImgDiv = styled.div`
   margin-top: 5%;
 `;
 
-const ProfileImg = styled.img`
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-`;
+// const ProfileImg = styled.img`
+//   height: 100%;
+//   width: 100%;
+//   border-radius: 50%;
+// `;
 
 const UserInfoDiv = styled.div`
   height: 80%;

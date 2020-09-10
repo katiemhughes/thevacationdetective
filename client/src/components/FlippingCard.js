@@ -62,6 +62,7 @@ class FlippingCard extends Component {
       .then((data) => {
         this.receiveUserData(data);
       });
+    console.log(this.props.userDestinations);
   };
 
   receiveUserData = (data) => {
@@ -75,12 +76,19 @@ class FlippingCard extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.setState({ isSubmitted: true });
+    this.setState({ isSubmitted: !this.state.isSubmitted });
   };
 
   render() {
     return (
       <div>
+        {this.state.isSubmitted ? (
+          <DestinationResults
+            preferences={this.state.checkboxes}
+            userId={this.props.userId}
+            handleSubmit={(e) => this.handleSubmit(e)}
+          />
+        ) : null}
         <ReactCardFlip
           isFlipped={this.props.flipped}
           flipDirection="horizontal"
@@ -88,19 +96,7 @@ class FlippingCard extends Component {
           <CardFront>
             <h3>Previous Searches</h3>
             <Boards>
-              {this.props.dataReceived ? (
-                this.props.userDestinations.map((singleDestination, index) => {
-                  return (
-                    <PreviousSearchIndividualDiv key={index}>
-                      <h1>{singleDestination.country}</h1>
-                      <p>{singleDestination.description}</p>
-                      <PreviousSearchImgDiv>
-                        <PreviousImg src={singleDestination.image} alt="" />
-                      </PreviousSearchImgDiv>
-                    </PreviousSearchIndividualDiv>
-                  );
-                })
-              ) : (
+              {this.props.userDestinations === null ? (
                 <NoDestinationsDiv>
                   <NoDestinationsTag>
                     You don't seem to have any saved destinations! Make a new
@@ -113,7 +109,22 @@ class FlippingCard extends Component {
                     New Search
                   </NewSearchButton>
                 </NoDestinationsDiv>
-              )}
+              ) : null}
+              {this.props.dataReceived
+                ? this.props.userDestinations.map(
+                    (singleDestination, index) => {
+                      return (
+                        <PreviousSearchIndividualDiv key={index}>
+                          <h1>{singleDestination.country}</h1>
+                          <p>{singleDestination.description}</p>
+                          <PreviousSearchImgDiv>
+                            <PreviousImg src={singleDestination.image} alt="" />
+                          </PreviousSearchImgDiv>
+                        </PreviousSearchIndividualDiv>
+                      );
+                    }
+                  )
+                : null}
             </Boards>
           </CardFront>
           <CardBack>
@@ -135,18 +146,9 @@ class FlippingCard extends Component {
                 })}
               </MakeCheckboxesWrap>
               <NewSearchButton type="submit">Submit</NewSearchButton>
-              <NewSearchButton onClick={this.props.flipHandler}>
-                Flip Back!
-              </NewSearchButton>
             </form>
           </CardBack>
         </ReactCardFlip>
-        {this.state.isSubmitted ? (
-          <DestinationResults
-            preferences={this.state.checkboxes}
-            userId={this.props.userId}
-          />
-        ) : null}
       </div>
     );
   }
@@ -175,6 +177,7 @@ const PreviousSearchIndividualDiv = styled.div`
   background-color: #023e8a;
   border-radius: 5px;
   margin: 1%;
+  border: 3px solid #00b4d8;
 `;
 
 const PreviousSearchImgDiv = styled.div`
@@ -188,6 +191,8 @@ const PreviousImg = styled.img`
 `;
 
 const NoDestinationsDiv = styled.div`
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -45,10 +45,15 @@ class DestinationResults extends Component {
       <StyledSection>
         <StyledDiv>
           {this.state.hasData ? (
-            <IndividualDestinations
-              results={this.state.results[0]}
-              userId={this.props.userId}
-            />
+            <div>
+              <StyledButton type="button" onClick={this.props.handleSubmit}>
+                Close
+              </StyledButton>
+              <IndividualDestinations
+                results={this.state.results[0]}
+                userId={this.props.userId}
+              />
+            </div>
           ) : null}
         </StyledDiv>
       </StyledSection>
@@ -60,14 +65,31 @@ export default DestinationResults;
 
 const StyledSection = styled.div`
   height: 80vh;
-  width: 80vw;
-  z-index: 2;
-  background-color: orange;
+  width: 77.3vw;
+  z-index: 3;
   position: absolute;
+  border-radius: 15px;
+  background-color: #90e0ef;
 `;
 
 const StyledDiv = styled.div`
   height: 100px;
   width: 100%;
   color: black;
+`;
+
+const StyledButton = styled.button`
+  height: 35px;
+  width: 100px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #023e8a;
+  &:active {
+    transform: scale(0.95, 0.95);
+  }
+  &:focus {
+    outline: none;
+  }
 `;

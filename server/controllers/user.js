@@ -29,6 +29,7 @@ exports.addUser = async function (req, res, next) {
           res.status(201).json({
             message: { msgBody: "User successfully added", msgError: false },
             data: newUser,
+            success: true,
           });
       });
     }
@@ -99,7 +100,7 @@ exports.addUserDestination = function (req, res, next) {
   ).then((user, err) => {
     if (!user) {
       res.json({
-        message: "No user found",
+        message: "You are not logged in!",
       });
     }
     if (err) {
@@ -108,7 +109,7 @@ exports.addUserDestination = function (req, res, next) {
       });
     } else {
       res.json({
-        message: "User destination updated",
+        message: `You have saved ${preferredDestination.country} to your profile!`,
         data: user,
       });
     }

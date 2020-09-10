@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaTimesCircle } from "react-icons/fa";
 import IndividualCheckbox from "./IndividualCheckbox";
 import DestinationResults from "./DestinationResults";
+import styled from "styled-components";
 
 class ProfilePage extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class ProfilePage extends React.Component {
       userLastName: "",
       userUserName: "",
       userEmail: "",
-      userDestinations: "",
+      userDestinations: null,
       userId: this.props.userId,
       checkboxes: [
         { name: "museums", checked: false, id: 1 },
@@ -36,6 +37,7 @@ class ProfilePage extends React.Component {
       ],
       showCheckBoxes: false,
       isSubmitted: false,
+      dataReceived: false,
     };
   }
   handleSelect = (index) => {
@@ -68,7 +70,8 @@ class ProfilePage extends React.Component {
     this.setState({ userUserName: data.data.userName });
     this.setState({ userEmail: data.data.email });
     this.setState({ userDestinations: data.data.destinations });
-    console.log(this.state.userFirstName);
+    this.setState({ dataReceived: true });
+    console.log(this.state.userDestinations[0]);
   };
 
   handleSearchVisible = () => {
@@ -89,19 +92,24 @@ class ProfilePage extends React.Component {
 
   render() {
     return (
-      <section className="profile-content-box">
+      <section className="profile-page">
         <header className="header">
           <h1>Welcome back {this.state.userFirstName}</h1>
-          <div className="profile-img"></div>
+          <Link to="" className="profile-link">
+            Go to your profile
+          </Link>
         </header>
-        <main className="search-board">
+        <main className="main-section">
           <div className="sub-title-box">
             <h3 onClick={this.handleSearchVisible} className="submit-btn">
               New Search
             </h3>
           </div>
           {this.state.isSubmitted ? (
-            <DestinationResults preferences={this.state.checkboxes} />
+            <DestinationResults
+              preferences={this.state.checkboxes}
+              userId={this.props.userId}
+            />
           ) : null}
           {this.state.showCheckBoxes ? (
             <div className="checkboxes">
@@ -136,14 +144,27 @@ class ProfilePage extends React.Component {
             </div>
           ) : (
             <div className="board-container">
-              <div className="previous-searches">
-                <h3>Previous searches</h3>
-              </div>
-              <div className="boards">
-                <div className="board"></div>
-                <div className="board"></div>
-                <div className="board"></div>
-              </div>
+              <h3 className="previous-searches-title">Previous searches</h3>
+              <Boards>
+                {this.state.dataReceived
+                  ? this.state.userDestinations.map(
+                      (singleDestination, index) => {
+                        return (
+                          <PreviousSearchIndividualDiv key={index}>
+                            <h1>{singleDestination.country}</h1>
+                            <p>{singleDestination.description}</p>
+                            <PreviousSearchImgDiv>
+                              <PreviousImg
+                                src={singleDestination.image}
+                                alt=""
+                              />
+                            </PreviousSearchImgDiv>
+                          </PreviousSearchIndividualDiv>
+                        );
+                      }
+                    )
+                  : null}
+              </Boards>
             </div>
           )}
         </main>
@@ -155,3 +176,25 @@ class ProfilePage extends React.Component {
   }
 }
 export default ProfilePage;
+
+const Boards = styled.div`
+  display: flex;
+`;
+
+const PreviousSearchIndividualDiv = styled.div`
+  width: 33.3%;
+  height: 40vh;
+  background-color: #0077b6;
+  border-radius: 5px;
+  margin: 1%;
+`;
+
+const PreviousSearchImgDiv = styled.div`
+  height: 75px;
+  width: 100%;
+`;
+
+const PreviousImg = styled.img`
+  height: 100%;
+  width: 100%;
+`;

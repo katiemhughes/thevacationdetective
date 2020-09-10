@@ -13,6 +13,7 @@
   width: 60vw;
   padding: 4.5%;
   background-color: #00b4d8;
+  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,7 +206,7 @@ label {
   width: 60vw;
   height: 50vh;
   background-color: #90e0ef;
-  border: 3px solid #023e8a;
+  border: 3px solid #819abbcc;
   border-radius: 10px;
 }
 .single-checkbox {
@@ -246,11 +247,14 @@ label {
   color: #023e8a;
 }
 
-.expandableDiv {
-  height: 500px;
-  transition: 2s;
-}
-
-.expandableDiv p {
-  visibility: visible;
+.signOutButton {
+  height: 50px;
+  width: 90px;
+  border: none;
+  border-radius: 15px;
+  background-color: #fff;
+  padding-top: 15px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }

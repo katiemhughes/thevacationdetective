@@ -66,29 +66,3 @@ exports.returnAllDestinations = function (req, res, next) {
     });
   });
 };
-
-exports.getCheckbox = function (req, res, next) {
-  const {
-    country,
-    museums,
-    beach,
-    mountains,
-    hiking,
-    jungle,
-    wildlife,
-    citybreak,
-    culturalEscape,
-    skyscrapers,
-    art,
-    paradise,
-    party,
-    ancientMonuments,
-    naturalWonders,
-    highLife,
-    desert,
-    shopping,
-    image,
-    description,
-  } = req.body;
-  Destination.find({ $and: [{}] });
-};

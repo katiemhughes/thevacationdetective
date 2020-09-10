@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const Destinations = require("../models/destinations");
 const bcrypt = require("bcrypt");
 
 exports.addUser = async function (req, res, next) {
@@ -133,4 +134,7 @@ exports.findUserById = function (req, res, next) {
       });
     }
   });
+  // .then((user) => {
+  //   Destinations.find({})
+  // });
 };

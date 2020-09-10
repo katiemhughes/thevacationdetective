@@ -32,10 +32,31 @@ const userSchema = new Schema({
     required: true,
     bcrypt: true,
   },
-  destinations: {
-    type: Array,
-    required: false,
-  },
+  destinations: [
+    {
+      rank: { type: Number },
+      country: { type: String },
+      museums: { type: Boolean },
+      beach: { type: Boolean },
+      mountains: { type: Boolean },
+      hiking: { type: Boolean },
+      jungle: { type: Boolean },
+      wildlife: { type: Boolean },
+      citybreak: { type: Boolean },
+      culturalEscape: { type: Boolean },
+      skyscrapers: { type: Boolean },
+      art: { type: Boolean },
+      paradise: { type: Boolean },
+      party: { type: Boolean },
+      ancientMonuments: { type: Boolean },
+      naturalWonders: { type: Boolean },
+      highLife: { type: Boolean },
+      desert: { type: Boolean },
+      shopping: { type: Boolean },
+      image: { type: String },
+      description: { type: String },
+    },
+  ],
 });
 
 userSchema.pre("save", function (next) {

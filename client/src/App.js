@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Route } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
-import { Route } from "react-router-dom";
 import SignUpForm from "./components/SignUpForm";
-import ProfilePage from "./components/ProfilePage.js";
+import CheckboxPage1 from "./components/CheckboxPage1.js";
 import "./App.css";
 
 function App() {
@@ -62,7 +61,8 @@ function App() {
         )}
       />
       <Route path="/signup" component={SignUpForm} />
-      <Route path="/profile" render={() => <ProfilePage userId={userId} />} />
+
+      <Route path="/profile" render={() => <CheckboxPage1 userId={userId} />} />
     </div>
   );
 }

@@ -8,15 +8,39 @@ class IndividualDestinations extends Component {
       hasData: false,
       results: null,
       isClicked: false,
+      preferredDestination: null,
     };
   }
+
   componentDidMount() {
     this.setState({ results: this.props.results });
-    this.randomFunction();
+    this.setHasDataToTrue();
   }
-  randomFunction = () => {
+
+  setHasDataToTrue = () => {
     this.setState({ hasData: true });
     console.log(this.props.results);
+  };
+
+  async addUserDestination() {
+    await fetch(
+      "http://localhost:4500/vacationdetective/v1/addUserDestination",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userId: this.props.userId,
+          preferredDestination: this.state.preferredDestination,
+        }),
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }
+
+  choosePreferredDestination = () => {
+    console.log(this.state.preferredDestination);
+    this.addUserDestination();
   };
 
   render() {
@@ -25,11 +49,24 @@ class IndividualDestinations extends Component {
         {this.state.hasData
           ? this.state.results.map((result, index) => {
               return (
-                <IndividualSections key={index}>
+                <IndividualSections
+                  key={index}
+                  onClick={() =>
+                    this.setState({
+                      preferredDestination: result,
+                    })
+                  }
+                >
                   <ImageItself src={result.image} alt="" />
                   <TextBlock>
                     <StyledTitle>{result.country}</StyledTitle>
                     <StyledP>{result.description}</StyledP>
+                    <button
+                      type="button"
+                      onClick={this.choosePreferredDestination}
+                    >
+                      Save me
+                    </button>
                   </TextBlock>
                 </IndividualSections>
               );

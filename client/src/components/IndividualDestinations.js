@@ -9,6 +9,7 @@ class IndividualDestinations extends Component {
       results: null,
       isClicked: false,
       preferredDestination: null,
+      returnMessage: null,
     };
   }
 
@@ -19,7 +20,6 @@ class IndividualDestinations extends Component {
 
   setHasDataToTrue = () => {
     this.setState({ hasData: true });
-    console.log(this.props.results);
   };
 
   async addUserDestination() {
@@ -35,7 +35,12 @@ class IndividualDestinations extends Component {
       }
     )
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        this.setState({ returnMessage: data.message });
+        setTimeout(() => {
+          this.setState({ returnMessage: null });
+        }, 3500);
+      });
   }
 
   choosePreferredDestination = () => {
@@ -46,6 +51,11 @@ class IndividualDestinations extends Component {
   render() {
     return (
       <div>
+        {this.state.returnMessage !== null ? (
+          <ReturnMessageDiv>
+            <ReturnMessage>{this.state.returnMessage}</ReturnMessage>
+          </ReturnMessageDiv>
+        ) : null}
         {this.state.hasData
           ? this.state.results.map((result, index) => {
               return (
@@ -59,14 +69,17 @@ class IndividualDestinations extends Component {
                 >
                   <ImageItself src={result.image} alt="" />
                   <TextBlock>
-                    <StyledTitle>{result.country}</StyledTitle>
+                    <TitleSaveButton>
+                      <StyledTitle>{result.country}</StyledTitle>
+                      <StyledButton
+                        type="button"
+                        onClick={this.choosePreferredDestination}
+                      >
+                        Save me
+                      </StyledButton>
+                    </TitleSaveButton>
+
                     <StyledP>{result.description}</StyledP>
-                    <button
-                      type="button"
-                      onClick={this.choosePreferredDestination}
-                    >
-                      Save me
-                    </button>
                   </TextBlock>
                 </IndividualSections>
               );
@@ -86,10 +99,31 @@ const IndividualSections = styled.div`
   color: #fff;
   font-weight: 900;
   transition: 2s;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
   &:hover {
     height: 500px;
     transition: 2s;
   }
+`;
+
+const ReturnMessageDiv = styled.div`
+  position: absolute;
+  margin-left: 40%;
+  margin-bottom: 90px;
+  z-index: 4;
+  width: 300px;
+  border-radius: 15px;
+`;
+
+const ReturnMessage = styled.p`
+  position: absolute;
+  font-size: 20px;
+  background-color: #888;
+  color: #fff;
+  margin-left: 40%;
+  margin-bottom: 90px;
+  z-index: 4;
 `;
 
 const ImageItself = styled.img`
@@ -98,10 +132,13 @@ const ImageItself = styled.img`
   object-fit: cover;
   margin: 0;
   position: absolute;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 `;
 
 const StyledTitle = styled.h1`
   background-color: rgba(0, 0, 0, 0.425);
+  border-radius: 15px;
   margin: 0;
   z-index: 2;
   font-size: 28px;
@@ -109,8 +146,17 @@ const StyledTitle = styled.h1`
   margin: 29px 0px;
 `;
 
+const TitleSaveButton = styled.div`
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+`;
+
 const StyledP = styled.p`
   background-color: rgba(0, 0, 0, 0.425);
+  border-radius: 15px;
   font-size: 20px;
   float: left;
   margin: 0;
@@ -118,4 +164,20 @@ const StyledP = styled.p`
 
 const TextBlock = styled.div`
   position: absolute;
+`;
+
+const StyledButton = styled.button`
+  height: 35px;
+  width: 100px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #023e8a;
+  &:active {
+    transform: scale(0.95, 0.95);
+  }
+  &:focus {
+    outline: none;
+  }
 `;

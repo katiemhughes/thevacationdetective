@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import { FaTimesCircle } from "react-icons/fa";
 import styled from "styled-components";
 import FlippingCard from "./FlippingCard";
-//import profileImage from "../images/profileImage.png";
+import ProfileIcon from "../images/ProfileIcon.png";
 
 class CheckboxPage1 extends React.Component {
   constructor(props) {
@@ -39,7 +39,7 @@ class CheckboxPage1 extends React.Component {
       isSubmitted: false,
       dataReceived: false,
       flipped: false,
-      //profileImg: profileImage,
+      profileImg: ProfileIcon,
     };
   }
 
@@ -59,14 +59,12 @@ class CheckboxPage1 extends React.Component {
   };
 
   receiveUserData = (data) => {
-    if (data.data.destinations !== null) {
-      this.setState({ userFirstName: data.data.firstName });
-      this.setState({ userLastName: data.data.lastName });
-      this.setState({ userUserName: data.data.userName });
-      this.setState({ userEmail: data.data.email });
-      this.setState({ userDestinations: data.data.destinations });
-      this.setState({ dataReceived: true });
-    }
+    this.setState({ userFirstName: data.data.firstName });
+    this.setState({ userLastName: data.data.lastName });
+    this.setState({ userUserName: data.data.userName });
+    this.setState({ userEmail: data.data.email });
+    this.setState({ userDestinations: data.data.destinations });
+    this.setState({ dataReceived: true });
   };
 
   handleSearchVisible = () => {
@@ -77,6 +75,18 @@ class CheckboxPage1 extends React.Component {
 
   flipHandler = () => {
     this.setState({ flipped: !this.state.flipped });
+    const { userId } = this.props;
+    fetch("http://localhost:4500/vacationdetective/v1/findUserById", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userId: userId,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        this.receiveUserData(data);
+      });
   };
 
   render() {
@@ -112,10 +122,12 @@ class CheckboxPage1 extends React.Component {
               {this.state.userFirstName} {this.state.userLastName}
             </h2>
             <h3>{this.state.userUserName}</h3>
-            <p>Saved Locations:</p>
+            {this.state.dataReceived ? <p>Saved Locations:</p> : null}
             {this.state.dataReceived
               ? this.state.userDestinations.map((singleDestination, index) => {
-                  return <li key={index}>{singleDestination.country}</li>;
+                  return (
+                    <ListItem key={index}>{singleDestination.country}</ListItem>
+                  );
                 })
               : null}
             <Link to="/" className="signOutButton">
@@ -187,6 +199,8 @@ const ProfileSection = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  color: #fff;
+  border: 3px solid #00b4d8;
   border-radius: 15px;
   padding: 0.5%;
   background-color: #023e8a;
@@ -212,4 +226,11 @@ const UserInfoDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const ListItem = styled.li`
+  font-size: 20px;
+  color: #fff;
+  list-style-type: none;
+  margin: 0px 0px 0px 20px;
 `;

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { FaTimesCircle } from "react-icons/fa";
 import styled from "styled-components";
 import FlippingCard from "./FlippingCard";
 import ProfileIcon from "../images/ProfileIcon.png";
@@ -38,6 +37,8 @@ class CheckboxPage1 extends React.Component {
       dataReceived: false,
       flipped: false,
       profileImg: ProfileIcon,
+      setDelete: false,
+      listItem: null,
     };
   }
   componentDidMount = async () => {
@@ -69,8 +70,40 @@ class CheckboxPage1 extends React.Component {
   };
   flipHandler = () => {
     this.setState({ flipped: !this.state.flipped });
+    // const { userId } = this.props;
+    // fetch("http://localhost:4500/vacationdetective/v1/findUserById", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({
+    //     userId: userId,
+    //   }),
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     this.receiveUserData(data);
+    //   });
+  };
+
+  componentDidUpdate = () => {
+    if (this.state.listItem !== null) {
+      fetch("http://localhost:4500/vacationdetective/v1/deleteListItem", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userId: this.props.userId,
+          preferredDestination: this.state.listItem,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          // this.refreshPage();
+        });
+    }
+  };
+
+  refreshPage = async () => {
     const { userId } = this.props;
-    fetch("http://localhost:4500/vacationdetective/v1/findUserById", {
+    await fetch("http://localhost:4500/vacationdetective/v1/findUserById", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -115,10 +148,22 @@ class CheckboxPage1 extends React.Component {
             </h2>
             <h3>{this.state.userUserName}</h3>
             {this.state.dataReceived ? <p>Saved Locations:</p> : null}
-            {this.state.dataReceived
+            {this.state.userDestinations !== null
               ? this.state.userDestinations.map((singleDestination, index) => {
                   return (
-                    <ListItem key={index}>{singleDestination.country}</ListItem>
+                    <div>
+                      <ListItem key={index}>
+                        {singleDestination.country}
+                      </ListItem>
+                      {/* <DeleteButton
+                        type="button"
+                        onClick={() => {
+                          this.setState({ listItem: singleDestination });
+                        }}
+                      >
+                        Delete
+                      </DeleteButton> */}
+                    </div>
                   );
                 })
               : null}
@@ -215,4 +260,13 @@ const ListItem = styled.li`
   color: #fff;
   list-style-type: none;
   margin: 0px 0px 0px 20px;
+<<<<<<< HEAD
 `;
+=======
+`;
+
+const DeleteButton = styled.button`
+  height: auto;
+  width: auto;
+`;
+>>>>>>> 513ec7033990941013e38efe3a113256d217ebc1

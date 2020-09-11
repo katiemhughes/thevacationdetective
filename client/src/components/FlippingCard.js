@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import ReactCardFlip from "react-card-flip";
 import styled from "styled-components";
 import IndividualCheckbox from "./IndividualCheckbox";
@@ -38,13 +39,13 @@ class FlippingCard extends Component {
       isSubmitted: false,
       dataReceived: false,
       flipped: false,
+      isThereDestinations: false,
     };
   }
   handleSelect = (index) => {
     const { checkboxes } = this.state;
     let newCheckbox = checkboxes;
     let currentCheckbox = newCheckbox[index];
-    console.log(currentCheckbox);
     newCheckbox[index].checked = !currentCheckbox.checked;
     currentCheckbox.index = index;
     this.setState({ checkboxes: newCheckbox });
@@ -62,8 +63,8 @@ class FlippingCard extends Component {
       .then((response) => response.json())
       .then((data) => {
         this.receiveUserData(data);
+        console.log(this.props.userDestinations);
       });
-    console.log(this.props.userDestinations);
   };
 
   receiveUserData = (data) => {
@@ -71,13 +72,14 @@ class FlippingCard extends Component {
     this.setState({ userLastName: data.data.lastName });
     this.setState({ userUserName: data.data.userName });
     this.setState({ userEmail: data.data.email });
-    this.setState({ userDestinations: data.data.destinations });
+    // this.setState({ userDestinations: data.data.destinations });
     this.setState({ dataReceived: true });
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
     this.setState({ isSubmitted: !this.state.isSubmitted });
+    this.setState({ isThereDestinations: true });
   };
 
   render() {
@@ -110,8 +112,8 @@ class FlippingCard extends Component {
                     New Search
                   </NewSearchButton>
                 </NoDestinationsDiv>
-              ) : null}
-              {this.props.dataReceived
+              })
+              {this.props.userDestinations !== null
                 ? this.props.userDestinations.map(
                     (singleDestination, index) => {
                       return (

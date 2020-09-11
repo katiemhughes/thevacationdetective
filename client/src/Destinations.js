@@ -1320,5 +1320,6 @@ const destinations = [
       "Out of all of the mountains that make up the Alps, the Matterhorn is probably the best known. Meaning “peak in the meadows” in German, the nearly 15,000-foot-tall mountain straddles the Swiss-Italian border and has long been a bucket list destination for climbers.",
   },
 ];
+console.log(destinations.length);
 
 module.exports = destinations;

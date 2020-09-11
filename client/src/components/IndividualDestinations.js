@@ -39,13 +39,25 @@ class IndividualDestinations extends Component {
         this.setState({ returnMessage: data.message });
         setTimeout(() => {
           this.setState({ returnMessage: null });
-        }, 3500);
+        }, 5000);
       });
   }
 
   choosePreferredDestination = () => {
-    console.log(this.state.preferredDestination);
     this.addUserDestination();
+  };
+
+  deleteLastItem = async () => {
+    await fetch(
+      "http://localhost:4500/vacationdetective/v1/deleteLastDestination",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userId: this.props.userId,
+        }),
+      }
+    );
   };
 
   render() {
@@ -53,7 +65,12 @@ class IndividualDestinations extends Component {
       <div>
         {this.state.returnMessage !== null ? (
           <ReturnMessageDiv>
-            <ReturnMessage>{this.state.returnMessage}</ReturnMessage>
+            <ReturnMessage>
+              {this.state.returnMessage}
+              {/* <DeleteButton type="button" onClick={this.deleteLastItem}>
+                Delete last item
+              </DeleteButton> */}
+            </ReturnMessage>
           </ReturnMessageDiv>
         ) : null}
         {this.state.hasData
@@ -73,7 +90,12 @@ class IndividualDestinations extends Component {
                       <StyledTitle>{result.country}</StyledTitle>
                       <StyledButton
                         type="button"
-                        onClick={this.choosePreferredDestination}
+                        onClick={async () => {
+                          await this.setState({
+                            preferredDestination: result,
+                          });
+                          this.choosePreferredDestination();
+                        }}
                       >
                         Save me
                       </StyledButton>
@@ -112,18 +134,30 @@ const ReturnMessageDiv = styled.div`
   margin-left: 40%;
   margin-bottom: 90px;
   z-index: 4;
+  height: 200px;
   width: 300px;
   border-radius: 15px;
+  background-color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const ReturnMessage = styled.p`
   position: absolute;
-  font-size: 20px;
-  background-color: #888;
+  font-size: 38px;
   color: #fff;
-  margin-left: 40%;
-  margin-bottom: 90px;
   z-index: 4;
+`;
+
+const DeleteButton = styled.button`
+  height: 10%;
+  width: 100%;
+  color: blue;
+  font-weight: 900;
+  background-color: none;
+  border: none;
+  cursor: pointer;
 `;
 
 const ImageItself = styled.img`
@@ -144,6 +178,17 @@ const StyledTitle = styled.h1`
   font-size: 28px;
   float: left;
   margin: 29px 0px;
+`;
+
+const StyledGreenTitle = styled.h1`
+  background-color: rgba(0, 0, 0, 0.425);
+  border-radius: 15px;
+  margin: 0;
+  z-index: 2;
+  font-size: 28px;
+  float: left;
+  margin: 29px 0px;
+  color: blue;
 `;
 
 const TitleSaveButton = styled.div`

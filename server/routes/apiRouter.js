@@ -11,6 +11,8 @@ const {
   signInAuthentication,
   addUserDestination,
   findUserById,
+  deleteLastDestination,
+  deleteListItem,
 } = require("../controllers/user");
 
 apiRouter.route("/");
@@ -26,6 +28,10 @@ apiRouter.route("/addDestination").post(addDestination);
 apiRouter.route("/returnAllDestinations").get(returnAllDestinations);
 
 apiRouter.route("/addUserDestination").post(addUserDestination);
+
+apiRouter.route("/deleteLastDestination").post(deleteLastDestination);
+
+apiRouter.route("/deleteListItem").post(deleteListItem);
 
 apiRouter.route("/signInAuthentication").post(signInAuthentication);
 

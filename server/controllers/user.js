@@ -1,8 +1,19 @@
 const User = require("../models/user");
 const bcrypt = require("bcrypt");
+const destinations = require("../../client/src/Destinations");
 
 exports.addUser = async function (req, res, next) {
   const { firstName, lastName, userName, email, password } = req.body;
+  if (password.length < 6) {
+    res.json({
+      message: "Password must be longer then 6 characters!",
+    });
+  }
+  if (!email.includes("@")) {
+    res.json({
+      message: "This must be a valid email address",
+    });
+  }
   User.findOne({ email: email }).then((user) => {
     if (user) {
       res.json({
@@ -83,16 +94,47 @@ exports.signInAuthentication = function (req, res, next) {
   });
 };
 
-// exports.addPreferences = function () {
-//   take user ID - req.params
-//   get preferences object - req.body
-//   call update preferences by id function + pass in params.id + req.body
-//   .then res.status(200).send(user object)
-// }
+// exports.addUserDestination = function (req, res, next) {
+//   const { preferredDestination, userId } = req.body;
+//   User.findById({ _id: userId }).then((user, err) => {
+//     for (let i = 0; i < 50; i++) {
+//       if (preferredDestination.country == user.destinations[i].country) {
+//         res.json({
+//           message: "You have already saved this destination!",
+//         });
+//         break;
+//       }
+//     }
+//   });
+//   if (preferredDestination === null) {
+//     return;
+//   } else {
+//     User.findByIdAndUpdate(
+//       { _id: userId },
+//       { $push: { destinations: preferredDestination } },
+//       { new: true }
+//     ).then((preferredDestination, user, err) => {
+//       if (!user) {
+//         res.json({
+//           message: null,
+//         });
+//       }
+//       if (err) {
+//         res.json({
+//           message: err.message,
+//         });
+//       } else {
+//         res.json({
+//           message: `You have saved ${preferredDestination.country} to your profile!`,
+//           data: user,
+//         });
+//       }
+//     });
+//   }
+// };
 
 exports.addUserDestination = function (req, res, next) {
   const { preferredDestination, userId } = req.body;
-
   User.findByIdAndUpdate(
     { _id: userId },
     { $push: { destinations: preferredDestination } },
@@ -131,6 +173,48 @@ exports.findUserById = function (req, res, next) {
       res.json({
         message: "User found successfully",
         data: user,
+      });
+    }
+  });
+};
+
+exports.deleteLastDestination = function (req, res, next) {
+  const { userId } = req.body;
+  User.findByIdAndUpdate(
+    { _id: userId },
+    { $pop: { destinations: 1 } },
+    { new: true }
+  ).then((user, err) => {
+    if (!user) {
+      res.json({
+        message: "No user found",
+      });
+    } else if (err) {
+      res.json({
+        message: err.message,
+      });
+    }
+  });
+};
+
+exports.deleteListItem = function (req, res, next) {
+  const { userId, preferredDestination } = req.body;
+  User.findByIdAndUpdate(
+    { _id: userId },
+    { $pull: { destinations: { country: preferredDestination.country } } },
+    { new: true }
+  ).then((user, err) => {
+    if (!user) {
+      res.json({
+        message: "No user found",
+      });
+    } else if (err) {
+      res.json({
+        message: err.message,
+      });
+    } else {
+      res.json({
+        message: `Successfully deleted ${preferredDestination.country} from your saved destinations`,
       });
     }
   });

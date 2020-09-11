@@ -98,7 +98,7 @@ class FlippingCard extends Component {
           <CardFront>
             <h3>Previous Searches</h3>
             <Boards>
-              {this.props.userDestinations ? null : (
+              {/* {this.props.userDestinations === null ? null : (
                 <NoDestinationsDiv>
                   <NoDestinationsTag>
                     You don't seem to have any saved destinations! Make a new
@@ -111,7 +111,7 @@ class FlippingCard extends Component {
                     New Search
                   </NewSearchButton>
                 </NoDestinationsDiv>
-              )}
+              )} */}
               {this.props.userDestinations !== null
                 ? this.props.userDestinations.map(
                     (singleDestination, index) => {

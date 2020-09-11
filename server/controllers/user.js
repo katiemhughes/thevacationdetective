@@ -4,11 +4,11 @@ const destinations = require("../../client/src/Destinations");
 
 exports.addUser = async function (req, res, next) {
   const { firstName, lastName, userName, email, password } = req.body;
-  if (password.length < 6) {
-    res.json({
-      message: "Password must be longer then 6 characters!",
-    });
-  }
+  // if (password.length < 6) {
+  //   res.json({
+  //     message: "Password must be longer then 6 characters!",
+  //   });
+  // }
   if (!email.includes("@")) {
     res.json({
       message: "This must be a valid email address",

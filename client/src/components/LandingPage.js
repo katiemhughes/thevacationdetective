@@ -27,13 +27,13 @@ function LandingPage({ setPassword, setUsername, handleSubmit, message }) {
             <br />
             {message === null ? null : <p>{message}</p>}
             <div className="buttons-wrapper">
-            <button className="submit-btn" type="submit">
-              Submit
-            </button>
-            <Link to="/signup">
-              <h3 className="signup-home-link">Sign up</h3>
-            </Link>
-            </div> 
+              <button className="submit-btn" type="submit">
+                Submit
+              </button>
+              <Link to="/signup">
+                <h3 className="signup-home-link">Sign up</h3>
+              </Link>
+            </div>
           </form>
         </div>
       </div>

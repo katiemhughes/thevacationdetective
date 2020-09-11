@@ -7,6 +7,7 @@ const SignUpForm = () => {
   const [userName, setUserName] = useState(null);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+  const [message, setMessage] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,7 +23,10 @@ const SignUpForm = () => {
       }),
     })
       .then((response) => response.json())
-      .then((data) => savedSuccessfully(data));
+      .then((data) => {
+        savedSuccessfully(data);
+        setMessage(data.message);
+      });
   };
 
   let history = useHistory();
@@ -37,6 +41,7 @@ const SignUpForm = () => {
     <div className="wrapper">
       <div className="signup-form-box">
         <h1>Please fill out form below</h1>
+        {message !== null ? <p>{message}</p> : null}
         <form>
           <div className="main-form-box">
             <div className="left-form-box">

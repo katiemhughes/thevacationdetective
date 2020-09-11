@@ -1,6 +1,6 @@
 const User = require("../models/user");
 const bcrypt = require("bcrypt");
-const destinations = require("../../client/src/Destinations");
+const destinations = require("../client/src/Destinations");
 
 exports.addUser = async function (req, res, next) {
   const { firstName, lastName, userName, email, password } = req.body;

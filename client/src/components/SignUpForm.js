@@ -11,7 +11,7 @@ const SignUpForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:4500/vacationdetective/v1/addUser", {
+    await fetch("/vacationdetective/v1/addUser", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

@@ -43,7 +43,7 @@ class CheckboxPage1 extends React.Component {
   }
   componentDidMount = async () => {
     const { userId } = this.props;
-    await fetch("http://localhost:4500/vacationdetective/v1/findUserById", {
+    await fetch("/vacationdetective/v1/findUserById", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -71,7 +71,7 @@ class CheckboxPage1 extends React.Component {
   flipHandler = () => {
     this.setState({ flipped: !this.state.flipped });
     const { userId } = this.props;
-    fetch("http://localhost:4500/vacationdetective/v1/findUserById", {
+    fetch("/vacationdetective/v1/findUserById", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -86,7 +86,7 @@ class CheckboxPage1 extends React.Component {
 
   componentDidUpdate = () => {
     if (this.state.listItem !== null) {
-      fetch("http://localhost:4500/vacationdetective/v1/deleteListItem", {
+      fetch("/vacationdetective/v1/deleteListItem", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -103,7 +103,7 @@ class CheckboxPage1 extends React.Component {
 
   refreshPage = async () => {
     const { userId } = this.props;
-    await fetch("http://localhost:4500/vacationdetective/v1/findUserById", {
+    await fetch("/vacationdetective/v1/findUserById", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -260,13 +260,9 @@ const ListItem = styled.li`
   color: #fff;
   list-style-type: none;
   margin: 0px 0px 0px 20px;
-<<<<<<< HEAD
-`;
-=======
 `;
 
 const DeleteButton = styled.button`
   height: auto;
   width: auto;
 `;
->>>>>>> 513ec7033990941013e38efe3a113256d217ebc1

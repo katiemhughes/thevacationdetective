@@ -15,7 +15,7 @@ function App() {
   async function handleSubmit(e) {
     e.preventDefault();
     await fetch(
-      "http://localhost:4500/vacationdetective/v1/signInAuthentication",
+      "/vacationdetective/v1/signInAuthentication",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

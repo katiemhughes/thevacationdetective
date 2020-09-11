@@ -70,18 +70,18 @@ class CheckboxPage1 extends React.Component {
   };
   flipHandler = () => {
     this.setState({ flipped: !this.state.flipped });
-    // const { userId } = this.props;
-    // fetch("http://localhost:4500/vacationdetective/v1/findUserById", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({
-    //     userId: userId,
-    //   }),
-    // })
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     this.receiveUserData(data);
-    //   });
+    const { userId } = this.props;
+    fetch("http://localhost:4500/vacationdetective/v1/findUserById", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userId: userId,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        this.receiveUserData(data);
+      });
   };
 
   componentDidUpdate = () => {

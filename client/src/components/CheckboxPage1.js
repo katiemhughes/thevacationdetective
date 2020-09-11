@@ -4,11 +4,9 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import FlippingCard from "./FlippingCard";
 import ProfileIcon from "../images/ProfileIcon.png";
-
 class CheckboxPage1 extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       userFirstName: "",
       userLastName: "",
@@ -42,7 +40,6 @@ class CheckboxPage1 extends React.Component {
       profileImg: ProfileIcon,
     };
   }
-
   componentDidMount = async () => {
     const { userId } = this.props;
     await fetch("http://localhost:4500/vacationdetective/v1/findUserById", {
@@ -57,7 +54,6 @@ class CheckboxPage1 extends React.Component {
         this.receiveUserData(data);
       });
   };
-
   receiveUserData = (data) => {
     this.setState({ userFirstName: data.data.firstName });
     this.setState({ userLastName: data.data.lastName });
@@ -66,13 +62,11 @@ class CheckboxPage1 extends React.Component {
     this.setState({ userDestinations: data.data.destinations });
     this.setState({ dataReceived: true });
   };
-
   handleSearchVisible = () => {
     this.setState({
       showCheckBoxes: true,
     });
   };
-
   flipHandler = () => {
     this.setState({ flipped: !this.state.flipped });
     const { userId } = this.props;
@@ -88,7 +82,6 @@ class CheckboxPage1 extends React.Component {
         this.receiveUserData(data);
       });
   };
-
   render() {
     return (
       <Section>
@@ -112,10 +105,9 @@ class CheckboxPage1 extends React.Component {
             />
           </MainBlock>
         </Main>
-
         <ProfileSection>
           <ProfileImgDiv>
-            {/* <ProfileImg src={this.state.profileImg} alt="" /> */}
+            <ProfileImg src={this.state.profileImg} alt="" />
           </ProfileImgDiv>
           <UserInfoDiv>
             <h2>
@@ -140,21 +132,18 @@ class CheckboxPage1 extends React.Component {
   }
 }
 export default CheckboxPage1;
-
 const Section = styled.section`
   height: 100vh;
   width: 100vw;
   display: flex;
-  background-color: #90e0ef;
+  background-color: #90E0EF;
 `;
-
 const Main = styled.main`
   height: 100%;
   width: 80%;
   display: flex;
   flex-direction: column;
 `;
-
 const Header = styled.header`
   height: 10%;
   width: 100%;
@@ -164,7 +153,6 @@ const Header = styled.header`
   padding: 1.5%;
   margin: 0;
 `;
-
 const NewSearchButton = styled.h3`
   height: 90px;
   width: 150px;
@@ -172,7 +160,7 @@ const NewSearchButton = styled.h3`
   border: none;
   border-radius: 15px;
   background-color: #fff;
-  color: #023e8a;
+  color: #023E8A;
   text-align: center;
   cursor: pointer;
   &:active {
@@ -182,7 +170,6 @@ const NewSearchButton = styled.h3`
     outline: none;
   }
 `;
-
 const MainBlock = styled.div`
   height: 90%;
   width: 100%;
@@ -191,7 +178,6 @@ const MainBlock = styled.div`
   margin-left: 1%;
   border-radius: 15px;
 `;
-
 const ProfileSection = styled.div`
   height: 100%;
   width: 20%;
@@ -200,26 +186,23 @@ const ProfileSection = styled.div`
   align-items: center;
   text-align: center;
   color: #fff;
-  border: 3px solid #00b4d8;
+  border: 3px solid #00B4D8;
   border-radius: 15px;
   padding: 0.5%;
-  background-color: #023e8a;
+  background-color: #023E8A;
   z-index: 2;
 `;
-
 const ProfileImgDiv = styled.div`
   height: 25%;
   width: 40%;
   border-radius: 50%;
   margin-top: 5%;
 `;
-
-// const ProfileImg = styled.img`
-//   height: 100%;
-//   width: 100%;
-//   border-radius: 50%;
-// `;
-
+const ProfileImg = styled.img`
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+`;
 const UserInfoDiv = styled.div`
   height: 80%;
   width: 100%;
@@ -227,7 +210,6 @@ const UserInfoDiv = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-
 const ListItem = styled.li`
   font-size: 20px;
   color: #fff;

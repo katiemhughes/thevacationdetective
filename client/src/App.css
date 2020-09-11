@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 
+.font {
+  font-family: 'Roboto Slab', serif;
+}
+
 .app {
   background-color: #caf0f8;
   height: 100vh;
@@ -246,7 +250,6 @@ label {
   padding: 1%;
   color: #023e8a;
 }
-
 .signOutButton {
   height: 40px;
   width: 85px;
@@ -260,7 +263,6 @@ label {
   align-items: center;
   margin-top: 50px;
 }
-
 .signOutButton:active {
   transform: scale(0.95, 0.95);
   color: #023e8a;

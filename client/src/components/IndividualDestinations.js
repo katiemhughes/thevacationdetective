@@ -49,7 +49,7 @@ class IndividualDestinations extends Component {
 
   deleteLastItem = async () => {
     await fetch(
-      "http://localhost:4500/vacationdetective/v1/deleteLastDestination",
+      "/vacationdetective/v1/deleteLastDestination",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

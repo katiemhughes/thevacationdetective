@@ -49,7 +49,7 @@ class ProfilePage extends React.Component {
 
   componentDidMount = async () => {
     const { userId } = this.props;
-    await fetch("http://localhost:4500/vacationdetective/v1/findUserById", {
+    await fetch("/vacationdetective/v1/findUserById", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

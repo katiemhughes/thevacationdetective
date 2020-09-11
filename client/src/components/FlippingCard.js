@@ -4,6 +4,7 @@ import ReactCardFlip from "react-card-flip";
 import styled from "styled-components";
 import IndividualCheckbox from "./IndividualCheckbox";
 import DestinationResults from "./DestinationResults";
+import "../App.css";
 
 class FlippingCard extends Component {
   constructor(props) {
@@ -52,7 +53,7 @@ class FlippingCard extends Component {
 
   componentDidMount = async () => {
     const { userId } = this.props;
-    await fetch("http://localhost:4500/vacationdetective/v1/findUserById", {
+    await fetch("/vacationdetective/v1/findUserById", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -183,7 +184,7 @@ const PreviousSearchIndividualDiv = styled.div`
 `;
 
 const PreviousSearchImgDiv = styled.div`
-  height: 20%x;
+  height: 20%;
   width: 100%;
 `;
 
@@ -207,7 +208,7 @@ const NoDestinationsTag = styled.h4`
   text-align: center;
 `;
 const NewSearchButton = styled.button`
-  height: 90px;
+  height: 80px;
   width: 150px;
   margin: 0px 325px 0px 45px;
   border: none;

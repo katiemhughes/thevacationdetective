@@ -24,7 +24,7 @@ class IndividualDestinations extends Component {
 
   async addUserDestination() {
     await fetch(
-      "http://localhost:4500/vacationdetective/v1/addUserDestination",
+      "/vacationdetective/v1/addUserDestination",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

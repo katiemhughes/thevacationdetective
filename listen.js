@@ -1,4 +1,6 @@
-const { PORT = 4500 } = process.env;
+//const { PORT = 4500 } = process.env;
+
+const PORT = process.env.PORT || 5000;
 
 const app = require("./server");
 
